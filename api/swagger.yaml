@@ -1,0 +1,185 @@
+---
+swagger: "2.0"
+info:
+  description: "Private API for Pass-i-Parcel"
+  version: "1.0.0"
+  title: "Pass-i-Parcel API"
+host: "passiparcel.com"
+basePath: "/v1"
+schemes:
+- "https"
+produces:
+- "application/json"
+paths:
+  /users/login:
+    post:
+      tags:
+      - "userDetails"
+      summary: "Authenticate with the server."
+      description: "Submit a users username and password to authenticate with the\
+        \ server, a token will be returned on successful login."
+      parameters:
+      - name: "username"
+        in: "query"
+        description: "The username."
+        required: true
+        type: "string"
+        format: "string"
+      - name: "password"
+        in: "query"
+        description: "The password"
+        required: true
+        type: "string"
+        format: "string"
+      responses:
+        200:
+          description: "A new token object"
+          schema:
+            $ref: "#/definitions/Token"
+        default:
+          description: "Authentication Failed."
+          schema:
+            $ref: "#/definitions/Error"
+  /users/logout:
+    post:
+      tags:
+      - "userDetails"
+      summary: "De-authenticates with the server."
+      description: "If the user is logged in, log them out, else return an error."
+      parameters:
+      - name: "id"
+        in: "query"
+        description: "The users id."
+        required: true
+        type: "string"
+        format: "string"
+      - name: "token"
+        in: "query"
+        description: "The token to invalidate."
+        required: true
+        type: "string"
+        format: "string"
+      responses:
+        200:
+          description: "Returns an information object containing the success message."
+          schema:
+            $ref: "#/definitions/Information"
+        503:
+          description: "Not currently logged in."
+          schema:
+            $ref: "#/definitions/Error"
+        default:
+          description: "Could not reach the server."
+          schema:
+            $ref: "#/definitions/Error"
+  /users/{id}:
+    get:
+      tags:
+      - "userDetails"
+      summary: "Get A users details"
+      description: "The user endpoint returns a users information based upon the id\
+        \ inputted.\n"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "The users id."
+        required: true
+        type: "number"
+        format: "int"
+      responses:
+        200:
+          description: "A user object"
+          schema:
+            $ref: "#/definitions/User"
+        default:
+          description: "User not found."
+          schema:
+            $ref: "#/definitions/Error"
+  /users/{id}/points:
+    put:
+      tags:
+      - "userDetails"
+      summary: "Update a users points"
+      description: "Specify to increment or decerement a users points by id by a set\
+        \ value\n"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "The users id."
+        required: true
+        type: "number"
+        format: "int"
+      - name: "direction"
+        in: "query"
+        description: "Specify whether points are being incremented or decremented."
+        required: true
+        type: "string"
+        format: "string"
+      - name: "points"
+        in: "query"
+        description: "The number of points."
+        required: true
+        type: "number"
+        format: "int"
+      responses:
+        200:
+          description: "An information object containing sucess details"
+          schema:
+            $ref: "#/definitions/Information"
+        default:
+          description: "Couldn't access the user."
+          schema:
+            $ref: "#/definitions/Error"
+definitions:
+  User:
+    type: "object"
+    properties:
+      userId:
+        type: "integer"
+        description: "Id of the user."
+      username:
+        type: "string"
+        description: "Username of the user."
+      password:
+        type: "string"
+        description: "A hash of the password of the user."
+      email:
+        type: "string"
+        description: "Email address of the user."
+      dateCreated:
+        type: "string"
+        description: "The date of the users creation."
+      points:
+        type: "string"
+        description: "The number of points held by a user."
+      tokens:
+        type: "array"
+        items:
+          $ref: "#/definitions/Token"
+  Token:
+    type: "object"
+    properties:
+      tokenId:
+        type: "integer"
+        description: "The token."
+      expiryDate:
+        type: "integer"
+        description: "Timestamp for the expiry date of the token."
+  Error:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      message:
+        type: "string"
+      fields:
+        type: "string"
+  Information:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      message:
+        type: "string"
