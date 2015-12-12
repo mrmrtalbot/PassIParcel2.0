@@ -18,7 +18,8 @@ db.once('open', function (callback) {
 });  
 
 
-var User = require('./models/users')
+var User = require('./models/user');
+var Parcel = require('./models/parcel');
 
 var app = express();
 

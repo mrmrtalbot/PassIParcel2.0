@@ -3,7 +3,8 @@
   "description": "y",
   "main": "server.js",
   "authors": [
-    "mrmrtalbot <mrmrtalbot@googlemail.com>"
+    "mrmrtalbot <mrmrtalbot@googlemail.com>",
+    "Matthew West <mattwest1992@gmail.com"
   ],
   "license": "MIT",
   "moduleType": [
