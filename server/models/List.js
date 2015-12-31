@@ -3,7 +3,7 @@ var mongoose = restful.mongoose;
 
 var CategorySchema = new mongoose.Schema({
     name: {type: String, required: true},
-    type: {type:Boolean},
+    categoryType: {type:Boolean},
 });
 
 var ProviderSchema = new mongoose.Schema({

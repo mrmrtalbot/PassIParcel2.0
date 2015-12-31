@@ -20,6 +20,16 @@ db.once('open', function (callback) {
 
 var User = require('./models/user');
 var Parcel = require('./models/parcel');
+var List = require('./models/list');
+var Advert = require('./models/advert');
+var ErrorHandling = require('./models/errorhandling');
+
+var advert = require('./routes/api/advert');
+var category = require('./routes/api/category');
+var parcel = require('./routes/api/parcel');
+var provider = require('./routes/api/provider');
+var user = require('./routes/api/user');
+
 
 var app = express();
 
@@ -37,6 +47,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/api', api);
+app.use('/api/user', user);
+app.use('/api/provider', provider);
+app.use('/api/parcel', parcel);
+app.use('/api/category', category);
+app.use('/api/advert', advert);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

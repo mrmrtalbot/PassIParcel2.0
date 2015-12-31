@@ -23,13 +23,13 @@ var UserDataSchema = new mongoose.Schema({
 		country: {type: String, required:true},
 		postCode: {type:String, required:true},
 	},
-	type: {type:Number},
+	userType: {type:Number},
 });
 
-var TokenSchema = new mongoose.schema({
+var TokenSchema = new mongoose.Schema({
 	Id: {type: String, default: validation.guid},
 	expiry: {type: Date, default: new Date(new Date().setYear(new Date().getFullYear() + 1))},
-})
+});
 
 var UsersSchema = new mongoose.Schema({
 	id: { type: Number, index: true},
@@ -43,9 +43,9 @@ var UsersSchema = new mongoose.Schema({
 	email: {type: String, required: true, unique: true},
 	dateCreated: { type: Date, default:Date.now },
 	points: {type: Number, default:0},
-	token: [{ type: TokenSchema}],
-	role: [{type:String, required: true}],
-	userData: {type:UserDataScheme},
+	token: { type: [TokenSchema]},
+	role: {type:[String], required: true},
+	userData: {type:UserDataSchema},
 });
 
 
