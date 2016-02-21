@@ -74,7 +74,7 @@ app.use(stormpath.init(app, {
 	client: {
 		apiKey {
 			id: '4JO290RITZWCEVEA0Y3QJ267D',
-			secret '9L/BeHebEIIjuZxyKAsmp3q0BlVNNe1watG2aKveN8Y'
+			secret: '9L/BeHebEIIjuZxyKAsmp3q0BlVNNe1watG2aKveN8Y'
 		}
 	},
 	application {
