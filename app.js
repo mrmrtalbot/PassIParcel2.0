@@ -43,10 +43,6 @@ var app = express();
 
 //stormpath setup
 
-var strategy = new StormpathStrategy();
-passport.use(strategy);
-passport.serializeUser(strategy.serializeUser);
-passport.deserializeUser(strategy.deserializeUser);
 
 
 // view engine setup
