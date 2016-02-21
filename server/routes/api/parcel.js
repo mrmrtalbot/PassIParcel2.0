@@ -6,6 +6,7 @@ var mongoose = restful.mongoose;
 
 var Parcel = mongoose.model('Parcel', Parcel);
 var Content = mongoose.model('ParcelContent', Content);
+var Batch = mongoose.model('ParcelBatch', Batch);
 
 
 router.post('/', function(req, res, next) {
@@ -74,7 +75,14 @@ router.put('/:id/batch/', function (req, res, next){
 });
 
 router.get('/batch/:id', function (req, res, next) {
-   //Retrieve Batch by ID
+   Batch.find({'_id':req.params.id}, function(err, batch) {
+   		if(err) {
+   			res.send(err);
+   		} else {
+   			res.send(batch);
+   		}
+   		
+   });
 });
 
 router.post('/batch', function (req,res,next) {
