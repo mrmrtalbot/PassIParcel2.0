@@ -12,3 +12,7 @@ var ProviderSchema = new mongoose.Schema({
 
 module.exports = restful.model('Category', CategorySchema);
 module.exports = restful.model('Provider', ProviderSchema);
+
+
+//Provider - Id, Name
+//Category - Id, Name

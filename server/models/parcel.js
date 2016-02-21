@@ -25,9 +25,9 @@ var ParcelSchema = new mongoose.Schema({
 var ParcelBatchSchema = new mongoose.Schema({
 	dateCreated: {type: Number, default: Date.now()},
 	name: {type: String, required: true},
-	passes: {type:Number, min: 0},
-	probability: {type:Number, default: 1, min:0.0001},
-	parcels: [ParcelSchema],
+	//passes: {type:Number, min: 0},
+	//probability: {type:Number, default: 1, min:0.0001},
+	parcels: [ParcelSchema], // Change to Parcel ID's
 });
 
 
@@ -35,3 +35,12 @@ var ParcelBatchSchema = new mongoose.Schema({
 module.exports = restful.model('Parcel', ParcelSchema);
 module.exports = restful.model('ParcelContent', ParcelContentSchema);
 module.exports = restful.model('ParcelBatch', ParcelBatchSchema);
+
+
+// Parcel Content schema change to id, name, content, extensionData, date updated, expiry of coupon
+// Parcel schema to contain id, expiry date, name, content, category, open method, probability, current owner id and previous owners(s) - string array, batch id, date updated
+// Parcel Batch schema - date created, name, owner id, description, date updated
+// Add ID to openMethod
+
+
+//In batch creation they would pass Name of batch, description of batch, expiry date of parcels, category of parcels, list of coupon codes, expiry date of coupon codes
