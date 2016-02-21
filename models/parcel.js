@@ -19,7 +19,7 @@ var ParcelSchema = new mongoose.Schema({
 	expiryDate: {type: Date, default: new Date(new Date().setYear(new Date().getFullYear() + 1))},
 	name: {type: String, required: true},
 	currentUser: {type: String, required: true},
-	previousUsers[{type:String}]
+	previousUsers:[{type:String}],
 	content: {type: ParcelContentSchema},
 	category: {type: String},
 });

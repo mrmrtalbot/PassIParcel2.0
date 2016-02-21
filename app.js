@@ -72,12 +72,12 @@ app.use('/api/advert', advert);
 
 app.use(stormpath.init(app, {
 	client: {
-		apiKey {
+		apiKey: {
 			id: '4JO290RITZWCEVEA0Y3QJ267D',
 			secret: '9L/BeHebEIIjuZxyKAsmp3q0BlVNNe1watG2aKveN8Y'
 		}
 	},
-	application {
+	application: {
 		href: 'https://api.stormpath.com/v1/applications/7UCamjLdlCqofWRB3jvGZC'
 	}
 }));
