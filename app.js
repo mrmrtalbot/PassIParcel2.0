@@ -57,6 +57,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', index_routes);
 app.use('/api', api);
 app.use('/api/user', user);
 app.use('/api/provider', provider);
