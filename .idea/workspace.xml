@@ -2,180 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9caf78f-24b9-4663-b625-14f2f9e5905b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/arguments.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/choice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/constants.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/help.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/nargs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/parents.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/prefix_chars.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/sub_commands.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/argparse/examples/sum.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/express/node_modules/send/node_modules/.bin/mime" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/express/node_modules/send/node_modules/.bin/mime" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/express/node_modules/send/node_modules/mime/cli.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/express/node_modules/send/node_modules/mime/cli.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/forms/test-browser.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/forms/test-browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/lib/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/lib/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/test/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/test/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/test/utils.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/qs/test/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/.bin/har-validator" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/.bin/har-validator" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/.bin/uuid" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/.bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/har-validator/bin/har-validator" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/har-validator/bin/har-validator" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/README.md" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/test/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/Makefile" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/README.md" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-conv" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-conv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-sign" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-sign" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-verify" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-verify" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-conv" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-conv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-sign" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-sign" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-verify" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-verify" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/node-uuid/benchmark/bench.sh" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/node-uuid/benchmark/bench.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/node-uuid/bin/uuid" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/node-uuid/bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/lib/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/lib/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/test/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/test/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/test/utils.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/request/node_modules/qs/test/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/.bin/js-yaml" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/.bin/js-yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/bin/js-yaml.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/bin/js-yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esparse" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esparse" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esvalidate" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esvalidate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/.bin/uuid" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/.bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/memcached/issues/1/bash.sh" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/memcached/issues/1/bash.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/memcached/issues/1/test.sh" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/memcached/issues/1/test.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/node-uuid/benchmark/bench.sh" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/node-uuid/benchmark/bench.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/node-uuid/bin/uuid" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/node-uuid/bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/.bin/js-yaml" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/.bin/js-yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/bin/js-yaml.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/bin/js-yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esparse" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esparse" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esvalidate" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esvalidate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/uuid/benchmark/bench.sh" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/uuid/benchmark/bench.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/winston/lib/winston/logger.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/winston/lib/winston/logger.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/winston/node_modules/async/support/sync-package-managers.js" afterPath="$PROJECT_DIR$/node_modules/express-stormpath/node_modules/winston/node_modules/async/support/sync-package-managers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/.bin/uuid" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/.bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/async/lib/async.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/async/lib/async.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/memcached/issues/1/bash.sh" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/memcached/issues/1/bash.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/memcached/issues/1/test.sh" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/memcached/issues/1/test.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/node-uuid/benchmark/bench.sh" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/node-uuid/benchmark/bench.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/node-uuid/bin/uuid" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/node-uuid/bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/redis/benches/stress/pubsub/run" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/redis/benches/stress/pubsub/run" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/redis/benches/stress/rpushblpop/run" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/redis/benches/stress/rpushblpop/run" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/redis/benches/stress/speed/plot" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/redis/benches/stress/speed/plot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/redis/diff_multi_bench_output.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/redis/diff_multi_bench_output.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/form-data/node_modules/async/support/sync-package-managers.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/form-data/node_modules/async/support/sync-package-managers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/test/run.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/test/run.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/LICENSE" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/Makefile" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/README.md" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/example/usage.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/example/usage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/browser.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/client.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/crypto.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/crypto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/server.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/LICENSE" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/Makefile" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/README.md" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/LICENSE" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/Makefile" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/test/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/LICENSE" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/Makefile" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/README.md" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/browser.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/client.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/crypto.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/crypto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/message.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/readme.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/readme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/server.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/uri.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/uri.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/utils.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/hawk/test/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsl.conf" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsl.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsstyle" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/http-signature/node_modules/ctype/tools/jsstyle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/LICENSE" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/README.md" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/lib/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/lib/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/test/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/node_modules/request/node_modules/qs/test/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/.bin/uuid" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/.bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/memcached/issues/1/bash.sh" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/memcached/issues/1/bash.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/memcached/issues/1/test.sh" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/memcached/issues/1/test.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/njwt/node_modules/uuid/benchmark/bench.sh" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/njwt/node_modules/uuid/benchmark/bench.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/node-uuid/benchmark/bench.sh" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/node-uuid/benchmark/bench.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/node-uuid/bin/uuid" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/node-uuid/bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/index.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/.bin/har-validator" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/.bin/har-validator" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/har-validator/bin/har-validator" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/har-validator/bin/har-validator" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/LICENSE" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/server.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/LICENSE" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/README.md" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/LICENSE" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/test/index.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/cryptiles/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/LICENSE" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/Makefile" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/README.md" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/test/server.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/test/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/test/utils.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/hawk/test/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-conv" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-conv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-conv" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-conv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/.bin/js-yaml" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/.bin/js-yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/bin/js-yaml.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/bin/js-yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esparse" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esparse" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esvalidate" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/.bin/esvalidate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" afterPath="$PROJECT_DIR$/node_modules/stormpath/node_modules/stormpath-config/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="Code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -195,12 +23,12 @@
     <favorites_list name="Code" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7346939">
-              <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -249,8 +77,18 @@
       <file leaf-file-name="www" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/www">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.62963">
-              <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44183168">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -285,8 +123,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/models/parcel.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -327,6 +166,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -355,27 +195,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,6 +263,9 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e9caf78f-24b9-4663-b625-14f2f9e5905b" name="Default" comment="" />
@@ -447,27 +275,44 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2072498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289166" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289166" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -477,6 +322,70 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/passport-stormpath/node_modules/stormpath/lib/authc/RequestAuthenticator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/parcel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/parcel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -517,14 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.62963">
-          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -535,8 +436,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7346939">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44183168">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding />
         </state>
       </provider>
