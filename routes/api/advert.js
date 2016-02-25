@@ -3,7 +3,7 @@ var router = express.Router();
 var stormpath = require('express-stormpath');
 
 
-router.get('/', stormpath.apiAuthenticationRequired, function(req, res, next) {
+router.get('/', function(req, res, next) {
     res.send({'text':'Advert Routes'});
 });
 
