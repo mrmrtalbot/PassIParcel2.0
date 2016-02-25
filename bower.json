@@ -24,6 +24,6 @@
     "bootstrap": "~3.3.6"
   },
   "install": {
-    "path:" "client/libs"
+    "path:": "client/libs"
   }
 }

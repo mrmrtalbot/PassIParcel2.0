@@ -4,8 +4,8 @@ var router = express.Router();
 //models
 
 var Users = require('../models/user');
-var Parcels = require('../models/parcel')
-var Adverts = require('../models/advert')
+var Parcels = require('../models/parcel');
+var Adverts = require('../models/advert');
 var Categories = require('../models/list');
 var Providers = require('../models/list');
 var Errors = require('../models/errorhandling');
