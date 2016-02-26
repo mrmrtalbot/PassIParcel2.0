@@ -4,32 +4,36 @@ var mongoose = restful.mongoose;
 var ParcelContentSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
 	dateCreated: { type: Date, default:Date.now },
+	dateUpdated: { type: Date, default:Date.now },
 	name: {type:String, required:true},
-	batchId: {type:Number, required: true},
-	passes: {type:Number, required:true, default: 0, min: 0, max:5 },
-	probability: {type:Number, default: 1, min:0.0001},
-	openMethod: [{
-		name: {type: String},
-		description: {type: String},
-	}],
+	content: {type:String, required: true},
+	extentsionData: {type:String, required: true},
 });
 
 var ParcelSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
+	dateCreated: { type: Date, default:Date.now },
+	dateUpdated: { type: Date, default:Date.now },
 	expiryDate: {type: Date, default: new Date(new Date().setYear(new Date().getFullYear() + 1))},
 	name: {type: String, required: true},
+	openMethod: [{
+		id: {type: Number},
+		name: {type: String},
+		description: {type: String},
+	}],
+	probability: {type:Number, default: 1, min:0.0001},
 	currentUser: {type: String, required: true},
 	previousUsers:[{type:String}],
-	content: {type: ParcelContentSchema},
+	contentId: {type: Number, required: true},
 	category: {type: String},
+	batchId: {type: Number},
 });
 
 var ParcelBatchSchema = new mongoose.Schema({
+	id: {type: Number, index: true},
 	dateCreated: {type: Number, default: Date.now()},
+	dateUpdated: { type: Date, default:Date.now },
 	name: {type: String, required: true},
-	//passes: {type:Number, min: 0},
-	//probability: {type:Number, default: 1, min:0.0001},
-	parcels: [ParcelSchema], // Change to Parcel ID's
 	ownerId: { type:String, required: true},
 });
 
