@@ -81,20 +81,6 @@ app.use(stormpath.init (app,
 			},
 }));
 
-//more stormpath
-
-/*)app.use(stormpath.init(app, {
-	client: {
-		apiKey: {
-			id: '4JO290RITZWCEVEA0Y3QJ267D',
-			secret: '9L/BeHebEIIjuZxyKAsmp3q0BlVNNe1watG2aKveN8Y'
-		}
-	},
-	application: {
-		href: 'https://api.stormpath.com/v1/applications/7UCamjLdlCqofWRB3jvGZC'
-	}
-}));
-*/
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
