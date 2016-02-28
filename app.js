@@ -36,6 +36,7 @@ var parcel = require('./routes/api/parcel');
 var provider = require('./routes/api/provider');
 var user = require('./routes/api/user');
 var index_routes = require('./routes/index');
+var createparcel_routes = require('./routes/createparcel');
 var auth_routes = require('./routes/auth');
 
 
