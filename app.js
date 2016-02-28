@@ -57,17 +57,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index_routes);
 app.use('/api', api);
 app.use('/api/user', user);
 app.use('/api/provider', provider);
 app.use('/api/parcel', parcel);
 app.use('/api/category', category);
 app.use('/api/advert', advert);
+app.use(stormpath.init (app, {website: true}));
 
 //more stormpath
 
-app.use(stormpath.init(app, {
+/*)app.use(stormpath.init(app, {
 	client: {
 		apiKey: {
 			id: '4JO290RITZWCEVEA0Y3QJ267D',
@@ -78,7 +78,7 @@ app.use(stormpath.init(app, {
 		href: 'https://api.stormpath.com/v1/applications/7UCamjLdlCqofWRB3jvGZC'
 	}
 }));
-
+*/
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
