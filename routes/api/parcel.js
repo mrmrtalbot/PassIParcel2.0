@@ -5,7 +5,6 @@ var restful = require('node-restful');
 var mongoose = restful.mongoose;
 
 var Parcel = mongoose.model('Parcel', Parcel);
-var Content = mongoose.model('ParcelContent', Content);
 var Batch = mongoose.model('ParcelBatch', Batch);
 
 
@@ -13,11 +12,21 @@ router.post('/', function(req, res, next) {
     var result = utils.BuildParcelFromData(req);
     if(!result["errorCode"])
     {
-        result.save(function (err) {
+        var error;
+        result.parcel.save(function (err) {
             if (err) {
-                res.send(err);
+                error=err;
             }
         });
+        result.content.save(function(err){
+           if(err) {
+               error=err;
+           }
+        });
+        if(error)
+        {
+            res.send(error);
+        }
     }
     res.send(result);
 });

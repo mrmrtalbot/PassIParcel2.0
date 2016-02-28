@@ -3,7 +3,10 @@ var mongoose = restful.mongoose;
 var util = require('./utils');
 
 var Parcel = mongoose.model('Parcel', Parcel);
-var Content = mongoose.model('ParcelContent', Content);
+var ParcelContent = mongoose.model('ParcelContent', ParcelContent);
+var Voucher = mongoose.model('ParcelVoucher', Voucher);
+
+
 var ErrorMessage = mongoose.model('Error', Error);
 //var InformationMessage = mongoose.model('Info', Info);
 
@@ -12,7 +15,9 @@ module.exports.testFunctionality = function() {
     return"Yay";
 };
 
+
 module.exports.BuildParcelFromData = function (req){
+    var Result = {};
     var p = new Parcel;
     var fields = new Array();
     if(util.isSet([req.body.expiryDate])) {
@@ -24,14 +29,49 @@ module.exports.BuildParcelFromData = function (req){
         fields.push("name");
     }
 
+    if(util.isSet([req.body.openMethods]) && req.body.openMethods.length > 0) {
+        p.openMethods =  [];
+        for(var i =0; i < req.body.openMethods.length; i++) {
+            if(req.body.openMethods[i].hasOwnProperty('name') && req.body.openMethods[i].hasOwnProperty('description')) {
+                p.openMethods.push({name:req.body.openMethods[i].name, description:req.body.openMethods[i].description});
+            } else {
+                fields.push ("malformed open method at index " + i);
+            }
+        }
+    } else {
+        fields.push("openMethods");
+    }
+
+    //TODO: Get current user via stormpath
+    if(true)
+    {
+        p.currentUser = "TODO";
+    }
+
+    //TODO: Get current user via stormpath
+    if(true)
+    {
+        p.previousUsers.push("TODO");
+    }
+
     if(util.isSet([req.body.category])) {
         p.category = req.body.category;
     } else {
         fields.push("category");
     }
 
+    if(util.isSet(([req.batchId])))
+    {
+        p.batchId = req.body.batchId;
+    } else {
+
+        //TODO:Create new batch
+        p.batchId = util.guid();
+    }
+
+
     if(util.isSet([req.body.content])) {
-        var temp = util.BuildParcelContentFromData(req, p, fields);
+        var temp = util.BuildParcelContentFromData(req, p, fields, Result);
         if(temp === Array) {
             fields.push.apply(fields, temp);
         }
@@ -43,63 +83,66 @@ module.exports.BuildParcelFromData = function (req){
         var e = util.GenerateError("100","The Message was missing parameters",fields.slice());
         return e;
     }
-    return p;
+    p.dateUpdated = Date.now();
+    if("content" in Result)
+    {
+        p.contentId = Result.content._id;
+    }
+    Result.parcel = p;
+
+    return Result;
 };
 
-module.exports.BuildParcelContentFromData = function (req, parcel, fields) {
+
+module.exports.BuildParcelContentFromData = function (req, parcel, fields, Result) {
     var hasParcel = true;
     if (typeof parcel === 'undefined') {
-        parcel = new Parcel;
+        hasParcel =  false;
     }
     if (typeof fields === 'undefined') {
         fields = new Array();
     }
 
-    parcel.content = new Content;
-    if(util.isSet([req.body.content.dateCreated])) {
-        parcel.content.dateCreated = req.body.content.dateCreated;
-    }
+    var content = new ParcelContent;
 
     if(util.isSet([req.body.content.name])) {
-        parcel.content.name = req.body.content.name;
+        content.name = req.body.content.name;
     } else {
         fields.push("content.name");
     }
 
-    if(util.isSet([req.body.content.batchId])) {
-        parcel.content.batchId = req.body.content.batchId;
-    } else {
-        fields.push("content.batchId");
+    if(util.isSet([req.body.content.extensionData]))
+    {
+        content.extensionData = req.body.extensionData;
     }
 
-    if(util.isSet([req.body.content.passes])) {
-        parcel.content.passes = req.body.content.passes;
-    }
+    if(util.isSet([req.body.content.vouchers]) && req.body.content.vouchers.constructor === Array && req.body.content.vouchers.length > 0)
+    {
+        var tempVoucher = new Voucher();
 
-    if(util.isSet([req.body.content.probability])) {
-        parcel.content.probability = req.body.content.probability;
-    }
-
-    if(util.isSet([req.body.content.openMethod]) && req.body.content.openMethod.length > 0) {
-        parcel.content.openMethod =  [];
-        for(var i =0; i < req.body.content.openMethod.length; i++) {
-            if(req.body.content.openMethod[i].hasOwnProperty('name') && req.body.content.openMethod[i].hasOwnProperty('description')) {
-                parcel.content.openMethod.push({name:req.body.content.openMethod[i].name, description:req.body.content.openMethod[i].description});
+        for (var i = 0; i< req.body.content.vouchers.length; i++) {
+            tempVoucher.code = req.body.content.vouchers[i];
+            if(typeof tempVoucher.code !== "string" || tempVoucher.code.length === 0)
+            {
+                fields.push("content.vouchers contains malformed objects");
             } else {
-                fields.push ("malformed open method at index " + i);
+                content.vouchers[i] = tempVoucher;
             }
         }
     } else {
-        fields.push("content.openMethod");
+        fields.push("content.vouchers");
     }
 
-    if(fields.length > 0 && !hasParcel) {
+    if(fields.length > 0) {
         if(hasParcel) {
             return fields;
         } else {
             var e = util.GenerateError("101","The Message was missing parameters",fields.slice());
             return e;
         }
+    } else {
+        content.dateUpdated = Date.now();
+        Result.content = content;
     }
 };
 
@@ -148,4 +191,14 @@ module.exports.isSet  = function(a){
 module.exports.strToJson= function(str) {
     eval("var x = " + str + ";");
     return JSON.stringify(x);
+};
+
+module.exports.guid = function () {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
 };
