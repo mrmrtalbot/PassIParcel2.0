@@ -5,7 +5,7 @@ var stormpath = require('express-stormpath');
 
 // Render the create parcel page.
 router.get('/createparcel',  stormpath.loginRequired,  function(req, res) {
-  res.render('createparcel', {title: 'Home', user: req.user});
+  res.render('createparcel', {title: 'Create Parcel', user: req.user});
 });
 
 module.exports = router;
