@@ -63,7 +63,15 @@ app.use('/api/provider', provider);
 app.use('/api/parcel', parcel);
 app.use('/api/category', category);
 app.use('/api/advert', advert);
-app.use(stormpath.init (app, {website: true}));
+app.use(stormpath.init (app, {website: true,
+enableFacebook: true,
+  social: {
+    facebook: {
+      appId: '464009947131641',
+	  appSecret: '25c855418e9e8231a4280b6b6c9e808f',
+			},
+	},
+}));
 
 //more stormpath
 
