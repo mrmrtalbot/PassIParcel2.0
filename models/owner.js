@@ -37,9 +37,8 @@ var OwnerSchema = new mongoose.Schema({
 	email: {type: String, required: true, unique: true},
 	dateCreated: { type: Date, default:Date.now },
 	points: {type: Number, default:0},
-	token: { type: [TokenSchema]},
 	role: {type:[String], required: true},
-	userData: {type:UserDataSchema},
+	ownerData: {type:OwnerDataSchema},
 });
 
 
