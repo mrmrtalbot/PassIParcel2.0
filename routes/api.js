@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 //models
-
 var Owners = require('../models/owner');
 var Adverts = require('../models/advert');
 var Parcels = require('../models/parcel');

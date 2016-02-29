@@ -21,6 +21,7 @@ Error Codes:
     10: Generic error
     100: Missing parameters from request message
     101: Document not found
+    110: Batch not found
 */
 
 /*

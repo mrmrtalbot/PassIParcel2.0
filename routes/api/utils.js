@@ -5,6 +5,7 @@ var util = require('./utils');
 var Parcel = mongoose.model('Parcel', Parcel);
 var ParcelContent = mongoose.model('ParcelContent', ParcelContent);
 var Voucher = mongoose.model('ParcelVoucher', Voucher);
+var Batch = mongoose.model('ParcelBatch', Batch);
 
 
 var ErrorMessage = mongoose.model('Error', Error);
@@ -64,9 +65,13 @@ module.exports.BuildParcelFromData = function (req){
     {
         p.batchId = req.body.batchId;
     } else {
+        util.GenerateBatch(req, parcel, Result);
 
-        //TODO:Create new batch
-        p.batchId = util.guid();
+        if("batch" in Result) {
+            p.batchId = Result.batch._id;
+        } else {
+            fields.push("Batch creation failure");
+        }
     }
 
 
@@ -145,6 +150,48 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
         Result.content = content;
     }
 };
+
+
+module.exports.GenerateBatch = function (req, parcel, Result) {
+    var b = new Batch();
+    var fields = new Array();
+
+    if(typeof req === 'undefined') {
+        fields.push("Batch");
+    }
+
+    if(typeof Result === 'undefined') {
+        Result = {};
+    }
+
+
+    if(typeof parcel === 'undefined') {
+        if(util.isSet([req.body.name])) {
+            b.name = req.body.name;
+        } else {
+            fields.push("Batch.name");
+        }
+    } else {
+        if(utils.isSet([parcel.name])) {
+            b.name = parcel.name + " Batch";
+        } else {
+            fields.push("Batch.name");
+        }
+    }
+
+    //TODO: Get Owner ID
+    if(true) {
+        b.ownerId = "TODO";
+    }
+
+
+    if(fields.length > 0) {
+        var e = util.GenerateError("101","The Message was missing parameters",fields.slice());
+        return e;
+    } else {
+        Result.batch = b;
+    }
+}
 
 module.exports.GenerateError = function(code,message,fields) {
     if (typeof code === 'undefined') {

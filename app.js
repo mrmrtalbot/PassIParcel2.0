@@ -21,13 +21,12 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
   // yay!
-});  
+});
 
-
+var Advert = require('./models/advert');
 var Owner = require('./models/owner');
 var Parcel = require('./models/parcel');
 var List = require('./models/list');
-var Advert = require('./models/advert');
 var ErrorHandling = require('./models/errorhandling');
 
 var advert = require('./routes/api/advert');

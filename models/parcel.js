@@ -1,13 +1,18 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
-var AdvertModel = mongoose.model('Advert', Advert);
-var OwnerModel = mongoose.model('Owner', Owner);
-
+var Advert = mongoose.model('Advert', Advert);
+var Owner = mongoose.model('Owner', Owner);
 
 var VoucherSchema = new mongoose.Schema({
 	id: {type: Number, index:true},
 	code: {type:String, required:true},
 });
+
+/*var OpenMethodSchema = new mongoose.Schema({
+	id: {type: Number},
+	name: {type: String},
+	description: {type: String},
+})*/
 
 
 var ParcelContentSchema = new mongoose.Schema({
@@ -36,9 +41,9 @@ var ParcelSchema = new mongoose.Schema({
 	previousUsers:[{type:String}],
 	contentId: {type: String , required: true},
 	category: {type: String},
-	batchId: {type: String},
+	batchId: {type: String, required: true},
 	adverts: [{
-		advert:{type: String, required: true},
+		advert:{type: Advert.schema, required: true}
 	}],
 });
 
@@ -47,7 +52,7 @@ var ParcelBatchSchema = new mongoose.Schema({
 	dateCreated: {type: Number, default: Date.now()},
 	dateUpdated: { type: Date, default:Date.now },
 	name: {type: String, required: true},
-	ownerId: {type: String, required: true},
+	ownerId: {type: Owner.schema, required: true},
 });
 
 
