@@ -1,5 +1,7 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
+var AdvertModel = mongoose.model('Advert', Advert);
+var OwnerModel = mongoose.model('Owner', Owner);
 
 
 var VoucherSchema = new mongoose.Schema({
@@ -35,6 +37,9 @@ var ParcelSchema = new mongoose.Schema({
 	contentId: {type: String , required: true},
 	category: {type: String},
 	batchId: {type: String},
+	adverts: [{
+		advert:{type: AdvertModel.schema, required: true},
+	}],
 });
 
 var ParcelBatchSchema = new mongoose.Schema({
@@ -42,7 +47,7 @@ var ParcelBatchSchema = new mongoose.Schema({
 	dateCreated: {type: Number, default: Date.now()},
 	dateUpdated: { type: Date, default:Date.now },
 	name: {type: String, required: true},
-	ownerId: { type:String, required: true},
+	ownerId: {type: OwnerModel.schema, required: true},
 });
 
 

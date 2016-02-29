@@ -1,8 +1,7 @@
 var restful = require('node-restful');
-var validation = require('../Helpers/ValidationHelper');
 var mongoose = restful.mongoose;
 
-var UserDataSchema = new mongoose.Schema({
+var OwnerDataSchema = new mongoose.Schema({
 	phoneNumber: {type:String},
 	confirmKey: {type:String},
 	confirmed: {type:Boolean},
@@ -31,7 +30,7 @@ var TokenSchema = new mongoose.Schema({
 	expiry: {type: Date, default: new Date(new Date().setYear(new Date().getFullYear() + 1))},
 });
 
-var UsersSchema = new mongoose.Schema({
+var OwnerSchema = new mongoose.Schema({
 	id: { type: Number, index: true},
 	name: {
 		first: {type: String},
@@ -49,6 +48,6 @@ var UsersSchema = new mongoose.Schema({
 });
 
 
-module.exports = restful.model('User', UsersSchema);
-module.exports = restful.model('UserData', UserDataSchema);
+module.exports = restful.model('Owner', OwnerSchema);
+module.exports = restful.model('OwnerData', OwnerDataSchema);
 module.exports = restful.model('Token', TokenSchema);
