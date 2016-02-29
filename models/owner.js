@@ -25,11 +25,6 @@ var OwnerDataSchema = new mongoose.Schema({
 	userType: {type:Number},
 });
 
-var TokenSchema = new mongoose.Schema({
-	Id: {type: String, default: validation.guid},
-	expiry: {type: Date, default: new Date(new Date().setYear(new Date().getFullYear() + 1))},
-});
-
 var OwnerSchema = new mongoose.Schema({
 	id: { type: Number, index: true},
 	name: {
