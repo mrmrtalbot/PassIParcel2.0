@@ -1,7 +1,7 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
-//var AdvertModel = mongoose.model('Advert', Advert);
-//var OwnerModel = mongoose.model('Owner', Owner);
+var AdvertModel = mongoose.model('Advert', Advert);
+var OwnerModel = mongoose.model('Owner', Owner);
 
 
 var VoucherSchema = new mongoose.Schema({
