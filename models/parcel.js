@@ -7,6 +7,12 @@ var VoucherSchema = new mongoose.Schema({
 	code: {type:String, required:true},
 });
 
+/*var OpenMethodSchema = new mongoose.Schema({
+	id: {type: Number},
+	name: {type: String},
+	description: {type: String},
+})*/
+
 
 var ParcelContentSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
@@ -34,7 +40,7 @@ var ParcelSchema = new mongoose.Schema({
 	previousUsers:[{type:String}],
 	contentId: {type: String , required: true},
 	category: {type: String},
-	batchId: {type: String},
+	batchId: {type: String, rquired: true},
 });
 
 var ParcelBatchSchema = new mongoose.Schema({
