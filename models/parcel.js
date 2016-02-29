@@ -1,7 +1,7 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
-var AdvertModel = mongoose.model('Advert', Advert);
-var OwnerModel = mongoose.model('Owner', Owner);
+//var AdvertModel = mongoose.model('Advert', Advert);
+//var OwnerModel = mongoose.model('Owner', Owner);
 
 
 var VoucherSchema = new mongoose.Schema({
@@ -16,7 +16,7 @@ var ParcelContentSchema = new mongoose.Schema({
 	dateUpdated: { type: Date, default:Date.now },
 	name: {type:String, required:true},
 	vouchers: [{
-		voucher:{type: VoucherSchema, required: true},
+		voucher:{type: String, required: true},
 	}],
 	extensionData: {type:String},
 });
@@ -38,7 +38,7 @@ var ParcelSchema = new mongoose.Schema({
 	category: {type: String},
 	batchId: {type: String},
 	adverts: [{
-		advert:{type: AdvertModel.schema, required: true},
+		advert:{type: String, required: true},
 	}],
 });
 
@@ -47,7 +47,7 @@ var ParcelBatchSchema = new mongoose.Schema({
 	dateCreated: {type: Number, default: Date.now()},
 	dateUpdated: { type: Date, default:Date.now },
 	name: {type: String, required: true},
-	ownerId: {type: OwnerModel.schema, required: true},
+	ownerId: {type: String, required: true},
 });
 
 
