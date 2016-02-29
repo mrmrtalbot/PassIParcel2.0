@@ -21,7 +21,7 @@ var ParcelContentSchema = new mongoose.Schema({
 	dateUpdated: { type: Date, default:Date.now },
 	name: {type:String, required:true},
 	vouchers: [{
-		voucher:{type: VoucherSchema, required: true},
+		voucher:{type: String, required: true},
 	}],
 	extensionData: {type:String},
 });
@@ -43,7 +43,7 @@ var ParcelSchema = new mongoose.Schema({
 	category: {type: String},
 	batchId: {type: String, required: true},
 	adverts: [{
-		advert:{type: Advert.schema, required: true},
+		advert:{type: Advert.schema, required: true}
 	}],
 });
 
