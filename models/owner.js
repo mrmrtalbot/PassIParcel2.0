@@ -45,4 +45,4 @@ var OwnerSchema = new mongoose.Schema({
 
 module.exports = restful.model('Owner', OwnerSchema);
 module.exports = restful.model('OwnerData', OwnerDataSchema);
-module.exports = restful.model('Token', TokenSchema);
+
