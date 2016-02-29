@@ -3,7 +3,7 @@ var router = express.Router();
 
 //models
 
-var Users = require('../models/user');
+var Owners = require('../models/owner');
 var Parcels = require('../models/parcel');
 var Adverts = require('../models/advert');
 var Categories = require('../models/list');
@@ -12,8 +12,8 @@ var Errors = require('../models/errorhandling');
 var Information = require('../models/errorhandling');
 
 /* GET api listing. */
-Users.methods(['get', 'put', 'post', 'delete']);
-Users.register(router, '/api/user');
+Owners.methods(['get', 'put', 'post', 'delete']);
+Owners.register(router, '/api/user');
 
 Parcels.methods(['get', 'put', 'post', 'delete']);
 Parcels.register(router, '/api/parcel');

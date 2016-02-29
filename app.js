@@ -24,7 +24,7 @@ db.once('open', function (callback) {
 });  
 
 
-var User = require('./models/user');
+var Owner = require('./models/owner');
 var Parcel = require('./models/parcel');
 var List = require('./models/list');
 var Advert = require('./models/advert');
@@ -34,7 +34,7 @@ var advert = require('./routes/api/advert');
 var category = require('./routes/api/category');
 var parcel = require('./routes/api/parcel');
 var provider = require('./routes/api/provider');
-var user = require('./routes/api/user');
+var owner = require('./routes/api/owner');
 var index_routes = require('./routes/index');
 var createparcel_routes = require('./routes/createparcel');
 var auth_routes = require('./routes/auth');
@@ -61,7 +61,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index_routes);
 app.use ('/createparcel', createparcel_routes);
 app.use('/api', api);
-app.use('/api/user', user);
+app.use('/api/owner', owner);
 app.use('/api/provider', provider);
 app.use('/api/parcel', parcel);
 app.use('/api/category', category);
