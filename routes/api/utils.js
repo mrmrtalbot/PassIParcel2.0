@@ -61,7 +61,7 @@ module.exports.BuildParcelFromData = function (req){
         fields.push("category");
     }
 
-    if(util.isSet(([req.batchId])))
+    if(util.isSet(([req.body.batchId])))
     {
         p.batchId = req.body.batchId;
     } else {
