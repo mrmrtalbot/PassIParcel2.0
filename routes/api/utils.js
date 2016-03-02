@@ -1,6 +1,6 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
-var util = require('./utils');
+var utils = require('./utils');
 
 var Parcel = mongoose.model('Parcel', Parcel);
 var ParcelContent = mongoose.model('ParcelContent', ParcelContent);
