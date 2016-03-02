@@ -65,7 +65,7 @@ module.exports.BuildParcelFromData = function (req){
     {
         p.batchId = req.body.batchId;
     } else {
-        utils.GenerateBatch(req, parcel, Result);
+        utils.GenerateBatch(req, p, fields, Result);
 
         if("batch" in Result) {
             p.batchId = Result.batch._id;
@@ -152,9 +152,12 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
 };
 
 
-module.exports.GenerateBatch = function (req, parcel, Result) {
+module.exports.GenerateBatch = function (req, parcel, fields ,Result) {
     var b = new Batch();
-    var fields = new Array();
+    if(typeof fields === 'undefined')
+    {
+        fields = new Array();
+    }
 
     if(typeof req === 'undefined') {
         fields.push("Batch");
@@ -186,6 +189,7 @@ module.exports.GenerateBatch = function (req, parcel, Result) {
 
 
     if(fields.length > 0) {
+
         var e = utils.GenerateError("101","The Message was missing parameters",fields.slice());
         return e;
     } else {
