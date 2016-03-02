@@ -9,10 +9,10 @@ var Batch = mongoose.model('ParcelBatch', Batch);
 
 
 router.post('/', function(req, res, next) {
-    if(util.isSet([req.body.batchId])) {
+    if(utils.isSet([req.body.batchId])) {
         Batch.findOne({'_id': req.body.batchId}, function(err) {
             if(err) {
-                res.send(util.GenerateError("110","Batch not found"));
+                res.send(utils.GenerateError("110","Batch not found"));
                 return;
             }
         });
