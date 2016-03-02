@@ -121,7 +121,7 @@ router.post('/batch', function (req,res,next) {
 
     if(!result["errorCode"]) {
 
-        result.batch.save(function(err){
+        result.save(function(err){
             if(err) {
                 res.send(err);
             }
