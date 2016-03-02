@@ -142,7 +142,7 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
         if(hasParcel) {
             return fields;
         } else {
-            var e = util.GenerateError("101","The Message was missing parameters",fields.slice());
+            var e = utils.GenerateError("101","The Message was missing parameters",fields.slice());
             return e;
         }
     } else {
