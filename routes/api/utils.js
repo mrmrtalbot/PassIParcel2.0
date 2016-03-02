@@ -163,10 +163,6 @@ module.exports.GenerateBatch = function (req, parcel, fields ,Result) {
         fields.push("Batch");
     }
 
-    if(typeof Result === 'undefined') {
-        Result = {};
-    }
-
 
     if(typeof parcel === 'undefined') {
         if(utils.isSet([req.body.name])) {
@@ -192,6 +188,8 @@ module.exports.GenerateBatch = function (req, parcel, fields ,Result) {
 
         var e = utils.GenerateError("101","The Message was missing parameters",fields.slice());
         return e;
+    } else if(typeof Result === 'undefined') {
+        return b;
     } else {
         Result.batch = b;
     }
