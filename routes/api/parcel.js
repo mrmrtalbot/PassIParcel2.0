@@ -116,7 +116,22 @@ router.get('/batch/:id', function (req, res, next) {
 });
 
 router.post('/batch', function (req,res,next) {
-    //Add a Batch
+
+    
+    var result = utils.GenerateBatch(req);
+
+    if(!result["errorCode"]) {
+
+        result.batch.save(function(err){
+            if(err) {
+                res.send(err);
+            }
+        });
+
+    }
+
+    res.send(result);
+
 });
 
 router.put('/batch',function (req,res,next){
