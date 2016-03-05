@@ -9,10 +9,10 @@ var Batch = mongoose.model('ParcelBatch', Batch);
 
 
 router.post('/', function(req, res, next) {
-    if(util.isSet([req.body.batchId])) {
+    if(utils.isSet([req.body.batchId])) {
         Batch.findOne({'_id': req.body.batchId}, function(err) {
             if(err) {
-                res.send(util.GenerateError("110","Batch not found"));
+                res.send(utils.GenerateError("110","Batch not found"));
                 return;
             }
         });
@@ -116,7 +116,21 @@ router.get('/batch/:id', function (req, res, next) {
 });
 
 router.post('/batch', function (req,res,next) {
-    //Add a Batch
+
+    var result = utils.GenerateBatch(req);
+
+    if(!result["errorCode"]) {
+
+        result.save(function(err){
+            if(err) {
+                res.send(err);
+            }
+        });
+
+    }
+
+    res.send(result);
+
 });
 
 router.put('/batch',function (req,res,next){

@@ -1,6 +1,6 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
-var util = require('./utils');
+var utils = require('./utils');
 
 var Parcel = mongoose.model('Parcel', Parcel);
 var ParcelContent = mongoose.model('ParcelContent', ParcelContent);
@@ -21,16 +21,16 @@ module.exports.BuildParcelFromData = function (req){
     var Result = {};
     var p = new Parcel;
     var fields = new Array();
-    if(util.isSet([req.body.expiryDate])) {
+    if(utils.isSet([req.body.expiryDate])) {
         p.expiryDate = req.body.expiryDate;
     }
-    if(util.isSet([req.body.name])) {
+    if(utils.isSet([req.body.name])) {
         p.name = req.body.name;
     } else {
         fields.push("name");
     }
 
-    if(util.isSet([req.body.openMethods]) && req.body.openMethods.length > 0) {
+    if(utils.isSet([req.body.openMethods]) && req.body.openMethods.length > 0) {
         p.openMethods =  [];
         for(var i =0; i < req.body.openMethods.length; i++) {
             if(req.body.openMethods[i].hasOwnProperty('name') && req.body.openMethods[i].hasOwnProperty('description')) {
@@ -55,17 +55,17 @@ module.exports.BuildParcelFromData = function (req){
         p.previousUsers.push("TODO");
     }
 
-    if(util.isSet([req.body.category])) {
+    if(utils.isSet([req.body.category])) {
         p.category = req.body.category;
     } else {
         fields.push("category");
     }
 
-    if(util.isSet(([req.batchId])))
+    if(utils.isSet(([req.batchId])))
     {
         p.batchId = req.body.batchId;
     } else {
-        util.GenerateBatch(req, parcel, Result);
+        utils.GenerateBatch(req, p, fields, Result);
 
         if("batch" in Result) {
             p.batchId = Result.batch._id;
@@ -75,8 +75,8 @@ module.exports.BuildParcelFromData = function (req){
     }
 
 
-    if(util.isSet([req.body.content])) {
-        var temp = util.BuildParcelContentFromData(req, p, fields, Result);
+    if(utils.isSet([req.body.content])) {
+        var temp = utils.BuildParcelContentFromData(req, p, fields, Result);
         if(temp === Array) {
             fields.push.apply(fields, temp);
         }
@@ -85,7 +85,7 @@ module.exports.BuildParcelFromData = function (req){
     }
 
     if(fields.length > 0) {
-        var e = util.GenerateError("100","The Message was missing parameters",fields.slice());
+        var e = utils.GenerateError("100","The Message was missing parameters",fields.slice());
         return e;
     }
     p.dateUpdated = Date.now();
@@ -110,18 +110,18 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
 
     var content = new ParcelContent;
 
-    if(util.isSet([req.body.content.name])) {
+    if(utils.isSet([req.body.content.name])) {
         content.name = req.body.content.name;
     } else {
         fields.push("content.name");
     }
 
-    if(util.isSet([req.body.content.extensionData]))
+    if(utils.isSet([req.body.content.extensionData]))
     {
         content.extensionData = req.body.extensionData;
     }
 
-    if(util.isSet([req.body.content.vouchers]) && req.body.content.vouchers.constructor === Array && req.body.content.vouchers.length > 0)
+    if(utils.isSet([req.body.content.vouchers]) && req.body.content.vouchers.constructor === Array && req.body.content.vouchers.length > 0)
     {
         var tempVoucher = new Voucher();
 
@@ -142,7 +142,7 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
         if(hasParcel) {
             return fields;
         } else {
-            var e = util.GenerateError("101","The Message was missing parameters",fields.slice());
+            var e = utils.GenerateError("101","The Message was missing parameters",fields.slice());
             return e;
         }
     } else {
@@ -152,21 +152,20 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
 };
 
 
-module.exports.GenerateBatch = function (req, parcel, Result) {
+module.exports.GenerateBatch = function (req, parcel, fields ,Result) {
     var b = new Batch();
-    var fields = new Array();
+    if(typeof fields === 'undefined')
+    {
+        fields = new Array();
+    }
 
     if(typeof req === 'undefined') {
         fields.push("Batch");
     }
 
-    if(typeof Result === 'undefined') {
-        Result = {};
-    }
-
 
     if(typeof parcel === 'undefined') {
-        if(util.isSet([req.body.name])) {
+        if(utils.isSet([req.body.name])) {
             b.name = req.body.name;
         } else {
             fields.push("Batch.name");
@@ -186,8 +185,11 @@ module.exports.GenerateBatch = function (req, parcel, Result) {
 
 
     if(fields.length > 0) {
-        var e = util.GenerateError("101","The Message was missing parameters",fields.slice());
+
+        var e = utils.GenerateError("101","The Message was missing parameters",fields.slice());
         return e;
+    } else if(typeof Result === 'undefined') {
+        return b;
     } else {
         Result.batch = b;
     }
