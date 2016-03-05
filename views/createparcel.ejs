@@ -78,23 +78,23 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>Create Parcel</h1>
-        <form>
+        <form action="https://pass-i-parcel.herokuapp.com/createparcel" method="GET">
 			Parcel Name:<br>
-			<input type="text" name="Parcel Name"><br>
+			<input type="text" name="parcelName"><br>
 			Category:<br>
-			<input type="text" name="Category">
+			<input type="text" name="category">
 			Parcel Open Method:<br>
-			<select name="Open Method">
-				<option value="Pass">Parcel Pass</option>
-				<option value="OpenMethod 2">OpenMethod 2</option>
-				<option value="OpenMethod 3">OpenMethod 3</option>
+			<select name="openMethod">
+				<option value="pass">Parcel Pass</option>
+				<option value="openMethod 2">OpenMethod 2</option>
+				<option value="openMethod 3">OpenMethod 3</option>
 			</select>
 			Voucher Name:<br>
-			<input type="text" name="Voucher Name">
+			<input type="text" name="voucherName">
 			Voucher Code file (csv):<br>
-			<input type="file" name="Voucher Code file">
+			<input type="file" name="voucherCodefile">
 			Submit:<br>
-			<button type="button" onclick="alert('Hello World!')">Submit</button>
+			<button type="button" value="Submit">Submit</button>
 		</form>
           
         </p>
