@@ -106,4 +106,19 @@ app.use(function(err, req, res, next) {
 });
 
 
+
 module.exports = app;
+
+
+
+/*
+Old API details
+
+
+apiKey.id = 55RE4LAXD93VTGA5HNMVWMTNO
+apiKey.secret = E/l0g+QJqB5txN5+iJFDVIObz4vCIPu6hkIqbAeDlvY
+
+
+
+4JO290RITZWCEVEA0Y3QJ267D
+9L/BeHebEIIjuZxyKAsmp3q0BlVNNe1watG2aKveN8Y*/

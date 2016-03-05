@@ -5,8 +5,7 @@ var Owner = mongoose.model('Owner', Owner);
 
 var VoucherSchema = new mongoose.Schema({
 	id: {type: Number, index:true},
-	code: {type:String, required:true},
-	used: {type: boolean, required: true}
+	code: {type:String, required:true}
 });
 
 /*var OpenMethodSchema = new mongoose.Schema({
@@ -15,17 +14,17 @@ var VoucherSchema = new mongoose.Schema({
 	description: {type: String},
 })*/
 
-
+//Updateable: Vouchers, date updated
 var ParcelContentSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
 	dateCreated: { type: Date, default:Date.now },
 	dateUpdated: { type: Date, default:Date.now },
 	name: {type:String, required:true},
-	vouchers: [{
-		voucher:{type: VoucherSchema, required: true}
-	}],
+	voucher: {type: VoucherSchema, required: true},
 	extensionData: {type:String},
 });
+
+
 
 var ParcelSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
@@ -44,16 +43,17 @@ var ParcelSchema = new mongoose.Schema({
 	category: {type: String},
 	batchId: {type: String, required: true},
 	adverts: [{
-		advert:{type: string, required: true}
+		advert:{type: String, required: true}
 	}],
+	opened: {type:Boolean, required: true, default: false}
 });
 
 var ParcelBatchSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
 	dateCreated: {type: Number, default: Date.now()},
-	dateUpdated: { type: Date, default:Date.now },
+	dateUpdated: { type: Date, default:Date.now() },
 	name: {type: String, required: true},
-	ownerId: {type: string, required: true},
+	ownerId: {type: String},		//TODO: Implement as required when owner ID is implemented
 });
 
 

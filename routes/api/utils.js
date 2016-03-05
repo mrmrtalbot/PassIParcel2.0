@@ -121,18 +121,13 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
         content.extensionData = req.body.extensionData;
     }
 
-    if(utils.isSet([req.body.content.vouchers]) && req.body.content.vouchers.constructor === Array && req.body.content.vouchers.length > 0)
+    if(utils.isSet([req.body.content.voucher]))
     {
-        var tempVoucher = new Voucher();
-
-        for (var i = 0; i< req.body.content.vouchers.length; i++) {
-            tempVoucher.code = req.body.content.vouchers[i];
-            if(typeof tempVoucher.code !== "string" || tempVoucher.code.length === 0)
-            {
-                fields.push("content.vouchers contains malformed objects");
-            } else {
-                content.vouchers[i] = tempVoucher;
-            }
+        if(req.body.content.vouchers.length === 0) {
+            fields.push("Content.vouchers contains a blank voucher");
+        } else {
+            content.voucher = new Voucher();
+            content.voucher.code = req.body.content.voucher;
         }
     } else {
         fields.push("content.vouchers");
