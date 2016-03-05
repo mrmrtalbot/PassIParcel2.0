@@ -4,8 +4,9 @@ var Owner = mongoose.model('Owner', Owner);
 
 var AdvertSchema = new mongoose.Schema({
     name: {type: String, required: true},
-    category: {type: String},
-    ownerId: { type:String, required: true},
+    ownerId: {type: String, required: true},
+    extensionData: {type: String, required: true},
+    url: {type: String, required: true}
 });
 
 module.exports = restful.model('Advert', AdvertSchema);
