@@ -5,8 +5,7 @@ var Owner = mongoose.model('Owner', Owner);
 
 var VoucherSchema = new mongoose.Schema({
 	id: {type: Number, index:true},
-	code: {type:String, required:true},
-	used: {type: boolean, required: true}
+	code: {type:String, required:true}
 });
 
 /*var OpenMethodSchema = new mongoose.Schema({
@@ -21,9 +20,7 @@ var ParcelContentSchema = new mongoose.Schema({
 	dateCreated: { type: Date, default:Date.now },
 	dateUpdated: { type: Date, default:Date.now },
 	name: {type:String, required:true},
-	vouchers: [{
-		voucher:{type: VoucherSchema, required: true}
-	}],
+	voucher: {type: VoucherSchema, required: true},
 	extensionData: {type:String},
 });
 
@@ -46,8 +43,9 @@ var ParcelSchema = new mongoose.Schema({
 	category: {type: String},
 	batchId: {type: String, required: true},
 	adverts: [{
-		advert:{type: string, required: true}
+		advert:{type: String, required: true}
 	}],
+	opened: {type:Boolean, required: true, default: false}
 });
 
 var ParcelBatchSchema = new mongoose.Schema({
