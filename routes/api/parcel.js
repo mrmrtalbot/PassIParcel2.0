@@ -6,6 +6,7 @@ var mongoose = restful.mongoose;
 
 var Parcel = mongoose.model('Parcel', Parcel);
 var Batch = mongoose.model('ParcelBatch', Batch);
+var Content = mongoose.model('ParcelContent', Content);
 
 
 router.post('/', function(req, res, next) {
@@ -63,7 +64,7 @@ router.get('/:id', function (req, res, next) {
 });
 
 router.get('/content/:id', function (req, res, next) {
-    Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
+    Content.findOne({'_id': req.params.id}, function (err, parcel) {
         if (err){
             return err;
         }
@@ -122,8 +123,9 @@ router.post('/batch', function (req,res,next) {
     if(!result["errorCode"]) {
 
         result.save(function(err){
-            if(err) {
-                res.send(err);
+            console.log(err);
+            if(err != null) {
+                result = err;
             }
         });
 

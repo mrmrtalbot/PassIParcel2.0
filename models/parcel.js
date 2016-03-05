@@ -14,7 +14,7 @@ var VoucherSchema = new mongoose.Schema({
 	description: {type: String},
 })*/
 
-
+//Updateable: Vouchers, date updated
 var ParcelContentSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
 	dateCreated: { type: Date, default:Date.now },
@@ -25,6 +25,8 @@ var ParcelContentSchema = new mongoose.Schema({
 	}],
 	extensionData: {type:String},
 });
+
+
 
 var ParcelSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
@@ -50,9 +52,9 @@ var ParcelSchema = new mongoose.Schema({
 var ParcelBatchSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
 	dateCreated: {type: Number, default: Date.now()},
-	dateUpdated: { type: Date, default:Date.now },
+	dateUpdated: { type: Date, default:Date.now() },
 	name: {type: String, required: true},
-	ownerId: {type: Owner.schema, required: true},
+	ownerId: {type: String},		//TODO: Implement as required when owner ID is implemented
 });
 
 
