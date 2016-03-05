@@ -42,7 +42,7 @@ var ParcelSchema = new mongoose.Schema({
 	contentId: {type: String , required: true},
 	batchId: {type: String, required: true},
 	adverts: [{
-		advert:{type: String, required: true}
+		advert:{type: Advert.schema, required: true}
 	}],
 	opened: {type:Boolean, required: true, default: false},
 	deleted: {type: Boolean, required: true, default:false},

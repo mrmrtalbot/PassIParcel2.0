@@ -7,17 +7,15 @@ var mongoose = restful.mongoose
 
 
 // Render the create parcel page.
-router.get('/',  function(req, res) {
+router.post('/',  function(req, res) {
   res.render('createparcel', {title: 'Create Parcel', user: req.user});
 });
 
-router.get('/createparcel', function(req, res){
+router.post('/createdparcel', function(req, res){
 
-	response = {
-       parcelname:req.query.parcelName,
-   };
-   res.end(JSON.stringify(response));
-})
+	res.render(JSON.stringify('req.body.name', req.body['name']);
+
+});
 
   /* var result = utils.BuildParcelFromData(req);
 
