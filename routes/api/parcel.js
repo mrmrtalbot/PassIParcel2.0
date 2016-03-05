@@ -64,7 +64,7 @@ router.get('/:id', function (req, res, next) {
 });
 
 router.get('/content/:id', function (req, res, next) {
-    Content.findOne({'_id': req.params.id}, function (err, parcel) {
+    Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
         if (err){
             return err;
         }
@@ -123,7 +123,6 @@ router.post('/batch', function (req,res,next) {
     if(!result["errorCode"]) {
 
         result.save(function(err){
-            console.log(err);
             if(err != null) {
                 result = err;
             }
@@ -135,9 +134,61 @@ router.post('/batch', function (req,res,next) {
 
 });
 
-router.put('/batch',function (req,res,next){
-   // Update a batch
+router.put('/parcel/:id/pass',function (req,res,next){
+    Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
+        if(err) {
+            res.send(err);
+        } else {
+             var result = utils.PassParcel(parcel, "TODO", req.body.newOwner);    //TODO: Replace todo with actual user id making the call
+
+            if(typeof result.errorCode !== 'undefined' || typeof result.parcel === 'undefined') {
+                res.send(result.errorCode);
+            } else {
+
+                result.parcel.save(function(err) {
+
+                });
+
+                res.send(result.parcel);
+            }
+        }
+
+    });
 });
+
+router.put('/parcel/:id/open', function (req,res,next) {
+    //Open Parcel
+});
+
+router.get('/batch/:id/all', function (req,res,next) {
+    //Get all parcels in a batch
+});
+
+router.get('/parcel/:id/content', function (req,res,next) {
+    //Get content of parcel by parcel id
+});
+
+router.get('/parcel/:id/voucher', function (req,res,next) {
+    //Get voucher code where parcel id is X
+});
+
+router.delete('parcel/:id/delete', function (req,res,next) {
+    //Delete parcel by id
+});
+
+
+/*
+ Pass parcel (PUT) /parcel/:id/pass,
+ Open parcel (PUT) /parcel/:id/open,
+ get all parcels in batch (GET) /batch/:id/all,
+ get content of parcel by parcel id (GET) /parcel/:id/content,
+ get voucher code where parcel id is x (GET) /parcel/:id/voucher,
+ Delete Parcel (DELETE) /parcel/:id/delete
+ */
+
+
+
+
 
 //POST User
 //Registers a user

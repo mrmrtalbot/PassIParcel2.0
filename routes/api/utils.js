@@ -98,6 +98,72 @@ module.exports.BuildParcelFromData = function (req){
     return Result;
 };
 
+module.exports.PassParcel = function(parcel,requestor, newOwner) {
+    var Result = {};
+    var fields = new Array();
+    if(typeof parcel === 'undefined') {
+        fields.push("Parcel not found");
+    }
+    if(typeof requestor === 'undefined' || requestor.length === 0) {
+        fields.push("Anonymous sender, pass failed");
+    }
+    if(typeof newOwner === 'undefined' || newOwner.length === 0) {
+        fields.push("New parcel owner not specified");
+    }
+
+    //TODO : check if new owner is a user on the system
+
+    if(typeof requestor === 'String' && typeof newOwner === 'String' && parcel.ownerId === requestor) {
+        if(parcel.previousUsers.indexOf(newOwner) > -1) {
+            fields.push("The parcel cannot be handed to this person. They have already recieved this parcel.");
+        } else {
+            parcel.previousUsers.push(requestor);
+            parcel.currentUser = newOwner;
+        }
+
+    } else {
+        return utils.GenerateError("100","The Message was missing parameters");
+    }
+
+    if(fields.length > 0) {
+        Result.errorCode = fields;
+    } else {
+        parcel.dateUpdated = Date.now();
+        Result.parcel = parcel;
+    }
+
+    return Result;
+
+};
+
+module.exports.OpenParcel = function(parcel, requestor) {
+    var Result = {};
+    var fields = new Array();
+
+    if(typeof parcel === 'undefined') {
+        fields.push("Parcel not found");
+    }
+
+    if(typeof requestor === 'undefined' || requestor.length === 0) {
+        fields.push("Anonymous requester, open failed");
+    }
+
+    if(typeof request === 'string' && parcel.currentUser === requestor) {
+        // Person is authorised to open it
+        //TODO - What happens when you open a parcel
+    }
+
+    if(fields.length > 0) {
+        Result.errorCode = fields;
+    } else {
+        parcel.dateUpdated = Date.now();
+        Result.parcel = parcel;
+    }
+
+    return Result;
+}
+
+
 
 module.exports.BuildParcelContentFromData = function (req, parcel, fields, Result) {
     var hasParcel = true;

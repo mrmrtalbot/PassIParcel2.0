@@ -22,6 +22,7 @@ Error Codes:
     100: Missing parameters from request message
     101: Document not found
     110: Batch not found
+    121: Attempt to modify a parcel they do not own
 */
 
 /*

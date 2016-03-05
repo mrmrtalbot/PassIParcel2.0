@@ -3,6 +3,7 @@ var mongoose = restful.mongoose;
 var Advert = mongoose.model('Advert', Advert);
 var Owner = mongoose.model('Owner', Owner);
 
+
 var VoucherSchema = new mongoose.Schema({
 	id: {type: Number, index:true},
 	code: {type:String, required:true}
@@ -14,7 +15,6 @@ var VoucherSchema = new mongoose.Schema({
 	description: {type: String},
 })*/
 
-//Updateable: Vouchers, date updated
 var ParcelContentSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
 	dateCreated: { type: Date, default:Date.now },
@@ -25,7 +25,8 @@ var ParcelContentSchema = new mongoose.Schema({
 });
 
 
-
+//Date updated changes, current user, previous users
+//TODO: Adverts update and schema change
 var ParcelSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
 	dateCreated: { type: Date, default:Date.now },
@@ -40,13 +41,14 @@ var ParcelSchema = new mongoose.Schema({
 	currentUser: {type: String, required: true},
 	previousUsers:[{type:String}],
 	contentId: {type: String , required: true},
-	category: {type: String},
 	batchId: {type: String, required: true},
 	adverts: [{
 		advert:{type: String, required: true}
 	}],
-	opened: {type:Boolean, required: true, default: false}
+	opened: {type:Boolean, required: true, default: false},
+	deleted: {type: Boolean, required: true, default:false},
 });
+
 
 var ParcelBatchSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
