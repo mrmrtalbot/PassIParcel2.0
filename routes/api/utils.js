@@ -6,6 +6,7 @@ var Parcel = mongoose.model('Parcel', Parcel);
 var ParcelContent = mongoose.model('ParcelContent', ParcelContent);
 var Voucher = mongoose.model('ParcelVoucher', Voucher);
 var Batch = mongoose.model('ParcelBatch', Batch);
+var stormpath = require('express-stormpath');
 
 
 var ErrorMessage = mongoose.model('Error', Error);
@@ -17,7 +18,7 @@ module.exports.testFunctionality = function() {
 };
 
 
-module.exports.BuildParcelFromData = function (req){
+module.exports.BuildParcelFromData = function (req, authResult){
     var Result = {};
     var p = new Parcel;
     var fields = new Array();
@@ -46,7 +47,9 @@ module.exports.BuildParcelFromData = function (req){
     //TODO: Get current user via stormpath
     if(true)
     {
-        p.currentUser = "TODO";
+        authResult.getAccount(function(err, account) {
+            p.currentUser = account.email;
+        });
     }
 
     //TODO: Get current user via stormpath

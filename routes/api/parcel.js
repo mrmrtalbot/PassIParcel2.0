@@ -3,6 +3,7 @@ var utils = require('./utils');
 var router = express.Router();
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
+var stormpath = require('express-stormpath');
 
 var Parcel = mongoose.model('Parcel', Parcel);
 var Batch = mongoose.model('ParcelBatch', Batch);
@@ -10,7 +11,10 @@ var Content = mongoose.model('ParcelContent', Content);
 var Voucher = mongoose.model('ParcelVoucher', Voucher);
 
 
-router.post('/', function(req, res, next) {
+
+
+
+router.post('/', stormpath.apiAuthenticationRequired, function(req, res, next) {
     if(utils.isSet([req.body.batchId])) {
         Batch.findOne({'_id': req.body.batchId}, function(err) {
             if(err) {
