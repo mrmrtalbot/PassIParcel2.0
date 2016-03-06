@@ -7,9 +7,10 @@ var mongoose = restful.mongoose;
 var Parcel = mongoose.model('Parcel', Parcel);
 var Batch = mongoose.model('ParcelBatch', Batch);
 var Content = mongoose.model('ParcelContent', Content);
+var stormpath = require('express-stormpath');
 
 
-router.post('/', function(req, res, next) {
+router.post('/', stormpath.apiAuthenticationRequired, function(req, res, next) {
     if(utils.isSet([req.body.batchId])) {
         Batch.findOne({'_id': req.body.batchId}, function(err) {
             if(err) {
