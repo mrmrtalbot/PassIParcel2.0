@@ -8,12 +8,6 @@ var VoucherSchema = new mongoose.Schema({
 	code: {type:String, required:true}
 });
 
-/*var OpenMethodSchema = new mongoose.Schema({
-	id: {type: Number},
-	name: {type: String},
-	description: {type: String},
-})*/
-
 var ParcelContentSchema = new mongoose.Schema({
 	id: {type: Number, index: true},
 	dateCreated: { type: Date, default:Date.now },
@@ -24,7 +18,6 @@ var ParcelContentSchema = new mongoose.Schema({
 });
 
 
-//Date updated changes, current user, previous users
 //TODO: Adverts update and schema change
 var ParcelSchema = new mongoose.Schema({
 	id: {type: Number, index: true},

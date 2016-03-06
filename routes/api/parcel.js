@@ -7,6 +7,7 @@ var mongoose = restful.mongoose;
 var Parcel = mongoose.model('Parcel', Parcel);
 var Batch = mongoose.model('ParcelBatch', Batch);
 var Content = mongoose.model('ParcelContent', Content);
+var Voucher = mongoose.model('ParcelVoucher', Voucher);
 
 
 router.post('/', function(req, res, next) {
@@ -54,72 +55,37 @@ router.post('/', function(req, res, next) {
 });
 
 
-router.get('/:id', function (req, res, next) {
-    Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
-        if (err){
-            res.send(err);
-        }
-        res.send(parcel);
-    });
-});
-
-router.get('/content/:id', function (req, res, next) {
-    Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
-        if (err){
-            return err;
-        }
-        res.send(parcel.content);
-    });
-});
-
-
-router.put('/:id', function (req, res, next) {
-    var query = {'_id': req.params.id};
-    var updated = req.body;
-
-    Parcel.findOneAndUpdate(query,updated, function (err, parcel) {
-        if (err) {
-            res.send(err);
-        }
-
-        res.send(parcel);
-    });
-});
-
-router.put('/:id/batch/', function (req, res, next){
-    Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
-        if (err){
-            res.send(err);
-        }
-        if(!utils.isSet(req.body.batchId)) {
-            res.send(utils.GenerateError("100","The Message was missing parameters",["batchId"]));
-        } else {
-            parcel.content.batchId = req.body.batchId;
-            parcel.save(function (err) {
-                if (err) {
-                    res.send(err);
-                }
-            });
+router.get('/parcel/:id', function (req, res, next) {
+    if(!utils.isSet([req.params.id])) {
+        res.send(utils.GenerateError("100","The Message was missing parameters",["Id"]));
+    } else {
+        Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
+            if (err){
+                res.send(err);
+            }
             res.send(parcel);
-        }
-    });
+        });
+    }
 });
+
 
 router.get('/batch/:id', function (req, res, next) {
-   Batch.find({'_id':req.params.id}, function(err, batch) {
-   		if(err) {
-   			res.send(err);
-   		} else {
-   			res.send(batch);
-   		}
-   		
-   });
+    if(!utils.isSet([req.params.id])) {
+        res.send(utils.GenerateError("100","The Message was missing parameters",["Id"]));
+    } else {
+        Batch.findOne({'_id':req.params.id}, function(err, batch) {
+            if(err) {
+                res.send(err);
+            } else {
+                res.send(batch);
+            }
+
+        });
+    }
 });
 
 router.post('/batch', function (req,res,next) {
-
     var result = utils.GenerateBatch(req);
-
     if(!result["errorCode"]) {
 
         result.save(function(err){
@@ -129,62 +95,189 @@ router.post('/batch', function (req,res,next) {
         });
 
     }
-
     res.send(result);
-
 });
 
+//TODO: To test
 router.put('/parcel/:id/pass',function (req,res,next){
-    Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
-        if(err) {
-            res.send(err);
-        } else {
-             var result = utils.PassParcel(parcel, "TODO", req.body.newOwner);    //TODO: Replace todo with actual user id making the call
-
-            if(typeof result.errorCode !== 'undefined' || typeof result.parcel === 'undefined') {
-                res.send(result.errorCode);
+    if(!utils.isSet([req.params.id])) {
+        res.send(utils.GenerateError("100","The Message was missing parameters",["Id"]));
+    } else {
+        Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
+            if(err) {
+                res.send(err);
             } else {
+                var result = utils.PassParcel(parcel, "TODO", req.body.newOwner);    //TODO: Replace todo with actual user id making the call
 
-                result.parcel.save(function(err) {
+                if(typeof result.errorCode !== 'undefined' || typeof result.parcel === 'undefined') {
+                    res.send(result.errorCode);
+                } else {
 
-                });
+                    result.parcel.save(function(err) {
+                        if(err) {
+                            res.send(err);
+                        } else {
+                            res.send(result.parcel);
+                        }
+                    });
 
-                res.send(result.parcel);
+                }
+            }
+
+        });
+    }
+});
+
+
+//TODO: To test
+router.put('/parcel/:id/open', function (req,res,next) {
+    if(!utils.isSet([req.params.id])) {
+        res.send(utils.GenerateError("100","The Message was missing parameters",["Id"]));
+    } else {
+        Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
+            if(err) {
+                res.send(err);
+            } else {
+                var result = utils.OpenParcel(parcel, "TODO"); //TODO: Replace todo with actual user id making the call
+
+                if(typeof result.errorCode !== 'undefined' || typeof result.parcel === 'undefined') {
+                    res.send(result.errorCode);
+                } else {
+
+                    result.parcel.save(function(err) {
+                        if(err) {
+                            res.send(err);
+                        } else {
+                            res.send(result.parcel);
+                        }
+                    });
+                }
+            }
+        });
+    }
+});
+
+
+//TODO: To test
+router.get('/batch/:id/all', function (req,res,next) {
+    if(!utils.isSet([req.params.id])) {
+        res.send(utils.GenerateError("100","The Message was missing parameters",["Id"]));
+    } else {
+        Batch.findOne({'_id': req.params.id}), function (err, batch) {
+            if(err) {
+                res.send(err);
+            } else {
+                if(!batch) {
+                    //No results found
+                    res.send(utils.GenerateError("110","Batch not found"));
+                } else {
+                    Parcel.find({'batchId': req.params.id}, function (err, parcels) {
+                        if(err) {
+                            res.send(err);
+                        } else if(!parcels) {
+                            res.send(utils.GenerateError("120","Parcels not found for Batch"));
+                        } else {
+                            res.send(parcels);
+                        }
+                    });
+                }
             }
         }
-
-    });
+    }
 });
 
-router.put('/parcel/:id/open', function (req,res,next) {
-    //Open Parcel
-});
 
-router.get('/batch/:id/all', function (req,res,next) {
-    //Get all parcels in a batch
-});
-
+//TODO: To test
 router.get('/parcel/:id/content', function (req,res,next) {
     //Get content of parcel by parcel id
+    if(!utils.isSet([req.params.id])) {
+        res.send(utils.GenerateError("100","The Message was missing parameters",["Id"]));
+    } else {
+        Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
+           if(err) {
+               res.send(err);
+           } else if (!parcel) {
+               res.send(utils.GenerateError("111","Parcel not found"));
+           } else {
+               if(utils.isSet([parcel.contentId])) {
+                    Content.findOne({'_id': parcel.contentId}, function(err, content) {
+                        if(err) {
+                            res.send(err);
+                        } else if(!content) {
+                            res.send(utils.GenerateError("112","Content not found"));
+                        } else {
+                            res.send(content);
+                        }
+                    });
+               } else {
+                   res.send(utils.GenerateError("102","Parcel contains no content"));
+               }
+           }
+        });
+    }
 });
 
+
+//TODO: To test
 router.get('/parcel/:id/voucher', function (req,res,next) {
     //Get voucher code where parcel id is X
+    if(!utils.isSet([req.params.id])) {
+        res.send(utils.GenerateError("100","The Message was missing parameters",["Id"]));
+    } else {
+        Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
+            if (err) {
+                res.send(err);
+            } else if (!parcel) {
+                res.send(utils.GenerateError("111", "Parcel not found"));
+            } else {
+                if(utils.isSet([parcel.contentId])) {
+                    Content.findOne({'_id': parcel.contentId},{ code: 1, _id:0}, function(err, voucher) {
+                        if(err) {
+                            res.send(err);
+                        } else if(!voucher) {
+                            res.send(utils.GenerateError("112","Content not found"));
+                        } else {
+                            res.send(voucher);
+                        }
+                    });
+                } else {
+                    res.send(utils.GenerateError("102","Parcel contains no content"));
+                }
+            }
+        });
+    }
 });
 
+
+//TODO: To test
+//TODO: Add If deleted checks to all gets and updates
 router.delete('parcel/:id/delete', function (req,res,next) {
     //Delete parcel by id
+    if(!utils.isSet([req.params.id])) {
+        res.send(utils.GenerateError("100","The Message was missing parameters",["Id"]));
+    } else {
+        Parcel.findOne({'_id': req.params.id}, function (err, parcel) {
+            if (err) {
+                res.send(err);
+            } else if (!parcel) {
+                res.send(utils.GenerateError("111", "Parcel not found"));
+            } else {
+                if(parcel.deleted === true) {
+                    res.send(utils.GenerateError("103", "Parcel has already been deleted"));
+                } else {
+                    parcel.deleted = true;
+                    parcel.save(function(err) {
+                        if(err) {
+                            res.send(err);
+                        } else {
+                            res.send(parcel);
+                        }
+                    });
+                }
+            }
+        });
+    }
 });
-
-
-/*
- Pass parcel (PUT) /parcel/:id/pass,
- Open parcel (PUT) /parcel/:id/open,
- get all parcels in batch (GET) /batch/:id/all,
- get content of parcel by parcel id (GET) /parcel/:id/content,
- get voucher code where parcel id is x (GET) /parcel/:id/voucher,
- Delete Parcel (DELETE) /parcel/:id/delete
- */
 
 
 

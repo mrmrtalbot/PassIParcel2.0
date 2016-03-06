@@ -98,6 +98,8 @@ module.exports.BuildParcelFromData = function (req){
     return Result;
 };
 
+
+//TODO: To test
 module.exports.PassParcel = function(parcel,requestor, newOwner) {
     var Result = {};
     var fields = new Array();
@@ -136,6 +138,8 @@ module.exports.PassParcel = function(parcel,requestor, newOwner) {
 
 };
 
+
+//TODO: To test
 module.exports.OpenParcel = function(parcel, requestor) {
     var Result = {};
     var fields = new Array();
@@ -148,9 +152,17 @@ module.exports.OpenParcel = function(parcel, requestor) {
         fields.push("Anonymous requester, open failed");
     }
 
+    if(typeof parcel.opened !== 'undefined' && parcel.opened === true) {
+        fields.push("The parcel is already open");
+    }
+
     if(typeof request === 'string' && parcel.currentUser === requestor) {
         // Person is authorised to open it
         //TODO - What happens when you open a parcel
+        parcel.opened = true;
+
+    } else {
+        fields.push("This is not your parcel to open");
     }
 
     if(fields.length > 0) {
