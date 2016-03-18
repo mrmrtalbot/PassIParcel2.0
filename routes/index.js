@@ -8,6 +8,10 @@ router.get('/', function(req, res) {
 });
 
 
+router.get('/Home', function(req, res) {
+  res.render('home', {title: 'Home', user: req.user});
+});
+
 // Render the dashboard page.
 router.get('/dashboard', function (req, res) {
   if (!req.user || req.user.status !== 'ENABLED') {
@@ -15,6 +19,14 @@ router.get('/dashboard', function (req, res) {
   }
 
   res.render('dashboard', {title: 'Dashboard', user: req.user});
+});
+
+router.get('/login', function(req,res) {
+  res.sendfile('views/partials/login.html');
+});
+
+router.get('/logout', function(req,res) {
+  res.sendfile('views/partials/logout.html');
 });
 
 module.exports = router;
