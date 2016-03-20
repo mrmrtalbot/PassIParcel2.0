@@ -22,11 +22,11 @@ router.get('/dashboard', function (req, res) {
 });
 
 router.get('/login', function(req,res) {
-  res.sendfile('views/partials/login.html');
+  res.sendFile('login.html', {root: './views/partials/'});
 });
 
 router.get('/logout', function(req,res) {
-  res.sendfile('views/partials/logout.html');
+  res.sendFile('logout.html', {root: './views/partials/'});
 });
 
 module.exports = router;
