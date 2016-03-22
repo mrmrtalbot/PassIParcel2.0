@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 
 
 router.get('/Home', function(req, res) {
-  res.render('home', {title: 'Home', user: req.user});
+  res.render('Home', {title: 'Home', user: req.user});
 });
 
 // Render the dashboard page.
