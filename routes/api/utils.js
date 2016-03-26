@@ -41,7 +41,7 @@ module.exports.BlindBatchParcelConstructor = function (parcel, content, index, v
 
 
 
-module.exports.BuildParcelFromData = function (req, authResult){
+module.exports.BuildParcelFromData = function (req){
     var Result = {};
     var p = new Parcel;
     var fields = new Array();
@@ -68,17 +68,21 @@ module.exports.BuildParcelFromData = function (req, authResult){
     }
 
     //TODO: Get current user via stormpath
-    if(true)
+    if(utils.isSet(req.user.username))
     {
-        authResult.getAccount(function(err, account) {
-            p.currentUser = account.email;
-        });
+        p.currentUser.push(req.user.username);
+    }
+    else {
+        fields.push("UserName");
     }
 
     //TODO: Get current user via stormpath
-    if(true)
+    if(utils.isSet(req.user.username))
     {
-        p.previousUsers.push("TODO");
+        p.previousUsers.push(req.user.username);
+    }
+    else {
+        fields.push("Username");
     }
 
     if(utils.isSet([req.body.category])) {

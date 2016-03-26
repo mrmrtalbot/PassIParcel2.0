@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
     <title>Navbar Template for Bootstrap</title>
 
@@ -32,7 +33,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body ng-app="passParcel" ng-controller="parcelController">
 
     <div class="container">
 
@@ -76,27 +77,41 @@
       </nav>
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
+      <div class="jumbotron" ng-cloak>
         <h1>Create Parcel</h1>
-        <form action="/created" enctype="application/x-www-form-urlencoded" method="POST">
+        <form name="parcelForm" ng-submit="doSomething()">
 			Parcel Name:<br>
-			<input type="text" name="parcelName"><br>
+			<input type="text" ng-model="form.parcelName" name="parcelName" required >
+
+          <br>
 			Category:<br>
-			<input type="text" name="category">
-			Parcel Open Method:<br>
-			<select name="openMethod">
-				<option value="pass">Parcel Pass</option>
-				<option value="openMethod 2">OpenMethod 2</option>
-				<option value="openMethod 3">OpenMethod 3</option>
-			</select>
-			Voucher Name:<br>
-			<input type="text" name="voucherName">
-			Voucher Code file (csv):<br>
-			<input type="file" name="voucherCodefile">
+			<input type="text" ng-model="form.parcelCategory" name="parcelCategory" required>
+
+            <br>
+
+            Parcel Open Method:<br>
+			<select name="openMethod" ng-model="form.openType" name="openType" required>
+                <option ng-repeat="open in dropDown.openMethod" value="{{open.text}}">{{open.text}}</select></option>
+            {{form.openType}}
+
+            <br>
+
+            Voucher Name:<br>
+			<input type="text" ng-model="form.voucherName" name="voucherName" required>
+
+            <br>
+
+            Voucher Code file (csv):<br>
+			<input type="file" csv-reader results="form.file" name="voucherFile" accept=".csv" required>
+
+            <br>
+            <br>
+                <br>
 			Submit:<br>
-			<button type="submit" value="Submit">Submit</button>
+			<input type="submit" value="submit" class="btn btn-primary" ng-disabled="parcelForm.$invalid">Submit</input>
+
 		</form>
-          
+          <pre>{{ form | json }}</pre>
         </p>
       </div>
 
@@ -111,5 +126,7 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/javascripts/CreateParcelController.js"></script>
   </body>
+
 </html>

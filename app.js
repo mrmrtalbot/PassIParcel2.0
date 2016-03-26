@@ -30,7 +30,6 @@ var ErrorHandling = require('./models/errorhandling');
 var advert = require('./routes/api/advert');
 var parcel = require('./routes/api/parcel');
 var index_routes = require('./routes/index');
-var createparcel_routes = require('./routes/createparcel');
 var auth_routes = require('./routes/auth');
 
 var app = express();
@@ -48,12 +47,19 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index_routes);
-app.use ('/createparcel', createparcel_routes);
 app.use('/api', api);
 app.use('/api/parcel', parcel);
 app.use('/api/advert', advert);
 app.use(stormpath.init (app, 
-{	website: true,
+{
+    web: {
+        spa: {
+            enabled: true,
+            view: path.join(__dirname, 'public', 'index.html')
+        }
+    },
+
+    website: true,
 	enableFacebook: true,
 	social: {
 		facebook: {
