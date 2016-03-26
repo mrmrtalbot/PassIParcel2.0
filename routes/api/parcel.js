@@ -15,6 +15,7 @@ var Voucher = mongoose.model('ParcelVoucher', Voucher);
 
 
 router.post('/', stormpath.apiAuthenticationRequired, function(req, res, next) {
+    console.log(req.user.username);
     if(utils.isSet([req.body.batchId])) {
         Batch.findOne({'_id': req.body.batchId}, function(err) {
             if(err) {

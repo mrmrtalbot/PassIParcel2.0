@@ -17,4 +17,55 @@ router.get('/dashboard', function (req, res) {
   res.render('dashboard', {title: 'Dashboard', user: req.user});
 });
 
+// Render the create parcel page.
+router.get('/createparcel',  function(req, res) {
+
+  res.render('createparcel', {title: 'Create Parcel', user: req.user});
+
+  console.log('hello');
+
+});
+
+router.post('/created', function(req, res){
+  res.render('index', {title: 'Create Parcel', user: req.user});
+  console.log('how are you');
+  console.log(JSON.stringify(req.body));
+  res.end();
+
+});
+
+/* var result = utils.BuildParcelFromData(req);
+
+ if(!result["errorCode"])
+ {
+ var error = "";
+ result.parcel.save(function (err) {
+ if (err) {
+ error=err;
+ }
+ });
+ if(error.length === 0) {
+ result.content.save(function(err){
+ if(err) {
+ error=err;
+ }
+ });
+ }
+ if(error.length === 0) {
+ result.batch.save(function(err){
+ if(err) {
+ error=err;
+ }
+ });
+ }
+
+ if(error)
+ {
+ res.send(error);
+ }
+ }
+ res.send(result);
+ */
+
+
 module.exports = router;
