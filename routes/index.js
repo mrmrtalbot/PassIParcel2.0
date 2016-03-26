@@ -21,7 +21,6 @@ router.get('/dashboard', function (req, res) {
   res.render('dashboard', {title: 'Dashboard', user: req.user});
 });
 
-<<<<<<< HEAD
 // Render the create parcel page.
 router.get('/createparcel',  function(req, res) {
 
@@ -74,7 +73,6 @@ router.post('/created', function(req, res){
 
 
 module.exports = router;
-=======
 router.get('/login', function(req,res) {
   res.sendFile('login.html', {root: './views/partials/'});
 });
@@ -84,4 +82,3 @@ router.get('/logout', function(req,res) {
 });
 
 module.exports = router;
->>>>>>> origin/master

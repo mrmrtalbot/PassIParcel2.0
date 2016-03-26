@@ -70,7 +70,7 @@ module.exports.BuildParcelFromData = function (req){
     //TODO: Get current user via stormpath
     if(utils.isSet(req.user.username))
     {
-        p.currentUser.push(req.user.username);
+        p.currentUser = req.user.username;
     }
     else {
         fields.push("UserName");
@@ -235,7 +235,7 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
             fields.push("Content.vouchers contains a blank voucher");
         } else {
             content.voucher = new Voucher();
-            content.voucher.code = req.body.content.voucher[0];
+            content.voucher.code = req.body.content.vouchers[0];
         }
     } else {
         fields.push("content.vouchers");

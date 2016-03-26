@@ -36,8 +36,8 @@ router.post('/', stormpath.apiAuthenticationRequired, function(req, res, next) {
         var resultObj = {};
         var error = "";
 
-        for(var i=0; i < req.body.vouchers.length; i++) {
-            utils.BlindBatchParcelConstructor(result.parcel, result.content, 1, req.body.vouchers, resultObj);
+        for(var i=0; i < req.body.content.vouchers.length; i++) {
+            utils.BlindBatchParcelConstructor(result.parcel, result.content, 1, req.body.content.vouchers, resultObj);
             if(Object.keys(resultObj).length !== 0) {
                 parcels.push(resultObj.parcel);
                 contents.push(resultObj.content);
