@@ -24,20 +24,33 @@ router.post('/', stormpath.apiAuthenticationRequired, function(req, res, next) {
         });
     }
 
-
     var result = utils.BuildParcelFromData(req);
 
     if(!result["errorCode"])
     {
+        var parcels = new Array();
+        var contents = new Array();
+        parcels.push(result.parcel);
+        contents.push(result.content);
+        var resultObj = {};
         var error = "";
-        result.parcel.save(function (err) {
+
+        for(var i=0; i < req.body.vouchers.length; i++) {
+            utils.BlindBatchParcelConstructor(result.parcel, result.content, 1, req.body.vouchers, resultObj);
+            if(Object.keys(resultObj).length !== 0) {
+                parcels.push(resultObj.parcel);
+                contents.push(resultObj.content);
+            }
+        }
+
+        Parcel.insertMany(parcels, function (err){
             if (err) {
                 error=err;
             }
         });
         if(error.length === 0) {
-            result.content.save(function(err){
-                if(err) {
+            Content.insertMany(contents, function (err){
+                if (err) {
                     error=err;
                 }
             });

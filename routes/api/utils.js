@@ -17,6 +17,29 @@ module.exports.testFunctionality = function() {
     return"Yay";
 };
 
+module.exports.BlindBatchParcelConstructor = function (parcel, content, index, voucher, result)
+{
+    if(typeof result === 'undefined') {
+        var result = {};
+    }
+
+    if(typeof voucher === 'undefined' || typeof parcel === 'undefined' || voucher.length === 0) {
+        return result;
+    }
+
+    if(typeof Parcel !== 'undefined' && typeof content !== 'undefined') {
+        result.parcel = parcel;
+        result.content = content;
+
+        result.parcel.id = mongoose.Types.ObjectId();
+        result.content.id = mongoose.Types.ObjectId();
+        result.parcel.contentId = result.content.id;
+    }
+
+    return result;
+}
+
+
 
 module.exports.BuildParcelFromData = function (req, authResult){
     var Result = {};
@@ -202,13 +225,13 @@ module.exports.BuildParcelContentFromData = function (req, parcel, fields, Resul
         content.extensionData = req.body.extensionData;
     }
 
-    if(utils.isSet([req.body.content.voucher]))
+    if(utils.isSet([req.body.content.vouchers]))
     {
         if(req.body.content.vouchers.length === 0) {
             fields.push("Content.vouchers contains a blank voucher");
         } else {
             content.voucher = new Voucher();
-            content.voucher.code = req.body.content.voucher;
+            content.voucher.code = req.body.content.voucher[0];
         }
     } else {
         fields.push("content.vouchers");
