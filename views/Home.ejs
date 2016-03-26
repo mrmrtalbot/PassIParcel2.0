@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Matthew West & Martin Talbot">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Welcome to Pass-i-Parcel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/pagecss/index.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,900' rel='stylesheet' type='text/css'>
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="js/pip.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="bg-container" ng-app="Pip" ng-controller="InterfaceController">
+    <div class="BsO container-fluid">
+
+        <section class="row">
+            <header class="row nopadding col-xs-12">
+                <nav class="col-xs-12">
+                    <ul class="col-xs-offset-0 col-sm-offset-9">
+                        <li class="col-xs-12 col-sm-4"><a href="#">About</a></li>
+                        <li class="col-xs-12 col-sm-4"><a href="#">How it works</a></li>
+                        <li class="col-xs-12 col-sm-4"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="row nopadding col-xs-12 col-sm-9" id="contentContainer">
+                <div id="contentBox" class="col-xs-12 col-sm-11 col-sm-offset-1" bind-dynamic-html="pageContent">
+                </div>
+            </div>
+            <div class="row hidden-xs nopadding col-xs-12 col-sm-3">
+                <div class="col-sm-offset-1 col-xs-offset-0 col-xs-12 col-sm-11">
+                    <h1>Parcel</h1>
+                </div>
+            </div>
+        </section>
+        <footer class=" BsO navbar navbar-fixed-bottom">
+            <p class="col-sm-2 col-xs-12">Copyright <a href="#">Pass-i-Parcel</a> 2016 &copy;</p>
+        </footer>
+    </div>
+
+</body>
