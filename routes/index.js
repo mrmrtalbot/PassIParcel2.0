@@ -72,7 +72,6 @@ router.post('/created', function(req, res){
  */
 
 
-module.exports = router;
 router.get('/login', function(req,res) {
   res.sendFile('login.html', {root: './views/partials/'});
 });
