@@ -26,8 +26,6 @@ router.get('/createparcel',  function(req, res) {
 
   res.render('createparcel', {title: 'Create Parcel', user: req.user});
 
-  console.log('hello');
-
 });
 
 router.post('/created', function(req, res){

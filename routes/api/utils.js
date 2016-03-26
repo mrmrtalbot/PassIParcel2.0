@@ -17,13 +17,11 @@ module.exports.testFunctionality = function() {
     return"Yay";
 };
 
-module.exports.BlindBatchParcelConstructor = function (parcel, content, index, voucher, result)
+module.exports.BlindBatchParcelConstructor = function (parcel, content, index, voucher)
 {
-    if(typeof result === 'undefined') {
-        var result = {};
-    }
+    var result = {};
 
-    if(typeof voucher === 'undefined' || typeof parcel === 'undefined' || voucher.length === 0) {
+    if(typeof voucher === 'undefined' || typeof parcel === 'undefined' || voucher.length === 0 || index > voucher.length) {
         return result;
     }
 
@@ -31,9 +29,11 @@ module.exports.BlindBatchParcelConstructor = function (parcel, content, index, v
         result.parcel = parcel;
         result.content = content;
 
-        result.parcel.id = mongoose.Types.ObjectId();
-        result.content.id = mongoose.Types.ObjectId();
-        result.parcel.contentId = result.content.id;
+        result.parcel._id = new mongoose.Types.ObjectId();;
+        result.content._id = new mongoose.Types.ObjectId();;
+        result.parcel.contentId = result.content._id;
+        result.content.voucher._id = new mongoose.Types.ObjectId();;
+        result.content.voucher.code = voucher[index];
     }
 
     return result;
@@ -354,3 +354,14 @@ module.exports.guid = function () {
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
         s4() + '-' + s4() + s4() + s4();
 };
+
+module.exports.objClone = function (obj) {
+    var copy = {};
+    for (var attr in obj) {
+        if (obj.hasOwnProperty(attr)) {
+            copy[attr] = obj[attr];
+        }
+    }
+
+    return copy;
+}

@@ -31,17 +31,18 @@ router.post('/', stormpath.apiAuthenticationRequired, function(req, res, next) {
     {
         var parcels = new Array();
         var contents = new Array();
-        parcels.push(result.parcel);
-        contents.push(result.content);
+        parcels.push(JSON.parse(JSON.stringify(result.parcel)));
+        contents.push(JSON.parse(JSON.stringify(result.content)));
         var resultObj = {};
         var error = "";
 
-        for(var i=0; i < req.body.content.vouchers.length; i++) {
-            utils.BlindBatchParcelConstructor(result.parcel, result.content, 1, req.body.content.vouchers, resultObj);
+        for(var i=1; i < req.body.content.vouchers.length; i++) {
+            resultObj = utils.BlindBatchParcelConstructor(result.parcel, result.content, i, req.body.content.vouchers);
             if(Object.keys(resultObj).length !== 0) {
-                parcels.push(resultObj.parcel);
-                contents.push(resultObj.content);
+                parcels.push(JSON.parse(JSON.stringify(resultObj.parcel)));
+                contents.push(JSON.parse(JSON.stringify(resultObj.content)));
             }
+
         }
 
         Parcel.insertMany(parcels, function (err){
@@ -69,7 +70,7 @@ router.post('/', stormpath.apiAuthenticationRequired, function(req, res, next) {
             res.send(error);
         }
     }
-    res.send(result);
+    res.send(contents);
 });
 
 
@@ -101,6 +102,19 @@ router.get('/batch/:id', function (req, res, next) {
         });
     }
 });
+
+
+router.get('/batch/', function (req, res, next) {
+    Batch.find( function(err, batch) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(batch);
+        }
+
+    });
+});
+
 
 router.post('/batch', function (req,res,next) {
     var result = utils.GenerateBatch(req);
