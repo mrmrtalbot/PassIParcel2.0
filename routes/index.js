@@ -72,7 +72,7 @@ router.post('/created', stormpath.groupsRequired(['admins']), function(req, res)
 
 
 router.get('/login', function(req,res) {
-  res.render('logins.html', {root: './views/partials/'});
+  res.render('login.html', {root: './views/partials/'});
 });
 
 router.get('/logout', function(req,res) {
