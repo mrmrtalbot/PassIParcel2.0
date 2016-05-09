@@ -23,13 +23,13 @@ router.get('/dashboard', function (req, res) {
 });
 
 // Render the create parcel page.
-router.get('/createparcel', stormpath.groupsRequired(['admins']),  function(req, res) {
+router.get('/createparcel',  function(req, res) {
 
   res.render('createparcel', {title: 'Create Parcel', user: req.user});
 
 });
 
-router.post('/created', stormpath.groupsRequired(['admins']), function(req, res){
+router.post('/created', function(req, res){
   res.render('index', {title: 'Create Parcel', user: req.user});
   console.log('how are you');
   console.log(JSON.stringify(req.body));
