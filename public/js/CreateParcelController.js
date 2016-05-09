@@ -3,7 +3,12 @@
  */
 (function() {
 
-    var app = angular.module("passParcel", []);
+    var app = angular.module("passParcel", [])
+
+    .config(['httpProvider', function($httpProvider)
+    {
+        $httpProvider.defaults.withCredentials = true;
+    }]);
 
     app.directive('csvReader', [function () {
 

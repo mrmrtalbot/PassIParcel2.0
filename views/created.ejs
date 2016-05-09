@@ -32,7 +32,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body ng-app="passParcel" ng-controller="viewParcelController">
 
     <div class="container">
 
@@ -77,25 +77,8 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Create Parcel</h1>
-        <form action="/created" enctype="application/x-www-form-urlencoded" method="POST">
-			Parcel Name:<br>
-			<input type="text" name="parcelName"><br>
-			Category:<br>
-			<input type="text" name="category">
-			Parcel Open Method:<br>
-			<select name="openMethod">
-				<option value="pass">Parcel Pass</option>
-				<option value="openMethod 2">OpenMethod 2</option>
-				<option value="openMethod 3">OpenMethod 3</option>
-			</select>
-			Voucher Name:<br>
-			<input type="text" name="voucherName">
-			Voucher Code file (csv):<br>
-			<input type="file" name="voucherCodefile">
-			Submit:<br>
-			<button type="submit" value="Submit">Submit</button>
-		</form>
+        <h1>Parcels</h1>
+
           
         </p>
       </div>
@@ -111,5 +94,6 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/CreateParcelController.js"></script>
   </body>
 </html>

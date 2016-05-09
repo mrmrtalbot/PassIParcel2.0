@@ -53,6 +53,9 @@ app.use('/api/advert', advert);
 app.use(stormpath.init (app, 
 {
     web: {
+        login: {
+            view: path.join(__dirname,'views',' login.ejs')
+        },
         spa: {
             enabled: true,
             view: path.join(__dirname, 'public', 'index.html')
@@ -109,8 +112,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-
 
 module.exports = app;
 

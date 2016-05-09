@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var stormpath = require('express-stormpath');
 
 
 // Render the home page.
@@ -22,13 +23,13 @@ router.get('/dashboard', function (req, res) {
 });
 
 // Render the create parcel page.
-router.get('/createparcel',  function(req, res) {
+router.get('/createparcel', stormpath.groupsRequired(['admins']),  function(req, res) {
 
   res.render('createparcel', {title: 'Create Parcel', user: req.user});
 
 });
 
-router.post('/created', function(req, res){
+router.post('/created', stormpath.groupsRequired(['admins']), function(req, res){
   res.render('index', {title: 'Create Parcel', user: req.user});
   console.log('how are you');
   console.log(JSON.stringify(req.body));
@@ -71,7 +72,7 @@ router.post('/created', function(req, res){
 
 
 router.get('/login', function(req,res) {
-  res.sendFile('login.html', {root: './views/partials/'});
+  res.render('login.ejs', {root: './views/partials/'});
 });
 
 router.get('/logout', function(req,res) {
