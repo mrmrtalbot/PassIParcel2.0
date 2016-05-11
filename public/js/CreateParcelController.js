@@ -1,7 +1,12 @@
 /**
  * Created by martin on 08/03/2016.
  */
+
 (function() {
+
+    if(typeof angular === 'undefined') {
+        console.log("not loaded");
+    }
 
     var app = angular.module("passParcel", [])
 
@@ -170,4 +175,4 @@
     }
 
 
-})();
+});
