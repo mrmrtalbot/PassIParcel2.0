@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module('Pip', ['stormpath', 'stormpath.templates']);
+    var app = angular.module("Pip", ['stormpath', 'stormpath.templates']);
 
     app.directive('bindDynamicHtml', ['$compile', function ($compile) {
         return function(scope, element, attrs) {
