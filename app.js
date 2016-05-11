@@ -1,6 +1,5 @@
 var stormpath = require('express-stormpath');
 var passport = require('passport');
-var StormpathStrategy = require('passport-stormpath');
 var session = require('express-session');
 var flash = require('connect-flash');
 var twilio = require('twilio')('AC8718bda9e1f370a5f7336fdc267e7076','1631bbf712e8dc8e46945056008e821e');
@@ -50,15 +49,12 @@ app.use('/', index_routes);
 app.use('/api', api);
 app.use('/api/parcel', parcel);
 app.use('/api/advert', advert);
-app.use(stormpath.init (app, 
-{
+app.use(stormpath.init (app,
+    {
     web: {
-        login: {
-            view: path.join(__dirname,'views',' login.ejs')
-        },
         spa: {
             enabled: true,
-            view: path.join(__dirname, 'public', 'index.html')
+            view: path.join(__dirname, 'public', 'home.ejs')
         }
     },
 
