@@ -54,7 +54,7 @@ app.use(stormpath.init (app,
     web: {
         spa: {
             enabled: true,
-            view: path.join(__dirname, 'public', 'home.ejs')
+            view: path.join(__dirname, 'public', 'Home.ejs')
         }
     },
 
