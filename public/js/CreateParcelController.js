@@ -1,9 +1,15 @@
 /**
  * Created by martin on 08/03/2016.
  */
+
 (function() {
 
-    var app = angular.module("passParcel", []);
+    if(typeof angular === 'undefined') {
+        console.log("not loaded");
+    }
+
+    var app = angular.module("passParcel", [])
+
 
     app.directive('csvReader', [function () {
 

@@ -293,6 +293,17 @@ router.get('/parcel/:id/voucher', function (req,res,next) {
     }
 });
 
+router.get('/parcel/', function (req, res, next) {
+    Parcel.find( function(err, parcel) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(parcel);
+        }
+
+    });
+});
+
 
 //TODO: To test
 //TODO: Add If deleted checks to all gets and updates

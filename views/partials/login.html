@@ -1,5 +1,6 @@
 <div ng-controller="LoginController" class="row nopadding col-xs-12">
-    <h2 class="col-xs-12 col-sm-offset-4 col-sm-4 col-xs-offset-0">Login</h2>
+    <h2 class="col-xs-12 col-sm-offset-4 col-sm-4 col-xs-offset-0 hidden-xs">Login</h2>
+    <div sp-login-form></div>
     <ng-form class="col-xs-12 col-sm-offset-4 col-sm-4 col-xs-offset-0" name="loginForm">
         <input class="col-xs-12" type="text" placeholder="Username" name="username" ng-model="user.userName" required>
         <input class="col-xs-12" type="password" placeholder="Password" name="password" ng-model="user.password" required>
@@ -7,9 +8,10 @@
 
         <input class ="col-xs-12" type="submit" value="Login">
 
+
         <a class="col-xs-12" href="#">Forgotten your password?</a>
 
-        <input id="facebookSignup" class="col-xs-12" type="submit" value="Sign up with Facebook">
+        <input id="facebookSignup" class="col-xs-12 hidden-xs" type="submit" value="Sign up with Facebook">
 
     </ng-form>
 </div>
