@@ -116,6 +116,19 @@ router.get('/batch/', function (req, res, next) {
 });
 
 
+
+router.get('/parcel/', function (req, res, next) {
+    Parcel.find( function(err, parcel) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(parcel);
+        }
+
+    });
+});
+
+
 router.post('/batch', function (req,res,next) {
     var result = utils.GenerateBatch(req);
     if(!result["errorCode"]) {
