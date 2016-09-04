@@ -1,0 +1,25 @@
+.fullWidth {
+  width:100%;
+}
+
+.buttonIcon {
+  margin-bottom: 1rem;
+}
+
+.carousel.carousel-slider {
+  height:200px !important;
+}
+
+
+.buttonLink a {
+  color: #7e57c2;
+  display:block;
+}
+
+.buttonLink a:hover {
+  color:#fff;
+}
+
+.buttonLink:hover, .buttonLink:active{
+  background-color: #7e57c2;
+}

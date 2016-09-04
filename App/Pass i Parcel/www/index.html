@@ -6,29 +6,52 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/theme.css"  media="screen,projection"/>
+
+
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/angular-materialize.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
-  </head>
-  <body ng-app="starter">
+    <script src="js/controllers/IndexController.js"></script>
+    <script src="js/controllers/ProfileController.js"></script>
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+  </head>
+  <body ng-app="PassIParcel" ng-controller="IndexController">
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons">menu</i></a>
+      <a href="#" class="brand-logo center">Pass I parcel</a>
+    </div>
+  </nav>
+    <ul id="slide-out" class="side-nav">
+      <li><div class="userView">
+        <img class="background" src="img/menu-splash.png">
+        <a href="#!user"><img class="circle" src="img/icon.png"></a>
+        <a href="#!name"><span class="white-text name">Matthew West</span></a>
+        <a href="#!email"><span class="white-text email">mattywest@ntlworld.com</span></a>
+      </div></li>
+      <li><a ui-sref="profile" href="#!"><i class="material-icons">perm_identity</i>Profile</a></li>
+      <li><a ui-sref="settings" href="#!"><i class="material-icons">settings</i>Settings</a></li>
+    </ul>
+
+  <ion-nav-view ></ion-nav-view>
   </body>
 </html>
